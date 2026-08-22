@@ -1,0 +1,154 @@
+
+========================================================================
+AUDIT: tickets/ticket_history.csv
+========================================================================
+shape: 11,905 rows x 21 columns
+
+         column          dtype  nulls  null_pct  unique  card_pct                sample
+      ticket_id         string      0       0.0   11905     100.0             TKT-40040
+     created_at datetime64[us]      0       0.0   11275      94.7   2026-02-20 09:12:00
+         intent       category      0       0.0      11       0.1     technical_support
+       subtopic       category      0       0.0      57       0.5           overheating
+      sentiment       category      0       0.0       3       0.0               neutral
+       priority       category      0       0.0       3       0.0                   low
+    resolved_by       category      0       0.0       2       0.0                    ai
+         status       category      0       0.0       2       0.0              resolved
+     confidence        float64      0       0.0     852       7.2                 0.803
+latency_seconds        float64      0       0.0     358       3.0                  1.56
+    tokens_used          int64      0       0.0    3209      27.0                  1959
+         region       category      0       0.0       2       0.0                    IN
+        channel       category      0       0.0       3       0.0                  chat
+       feedback            str      0       0.0       3       0.0                      
+           date         object      0       0.0     183       1.5            2026-02-20
+           hour          int32      0       0.0      12       0.1                     9
+        weekday            str      0       0.0       7       0.1                Friday
+           week            str      0       0.0      27       0.2 2026-02-16/2026-02-22
+       days_ago          int64      0       0.0     183       1.5                   182
+   has_feedback           bool      0       0.0       2       0.0                 False
+      escalated           bool      0       0.0       2       0.0                 False
+
+notes:
+  - ticket_id is unique across all rows (primary key holds)
+  - 0 rows share an identical attribute combination (0.0%) - expected given only 14 categorical fields
+  - feedback blank on 7,482 rows (62.8%) - by design, most tickets are unrated
+  - timespan 182 days, 183 distinct dates
+  - all timestamps fall inside stated support hours 09:00-21:00
+  - Sunday tickets: 498 (policy says no Sunday support)
+  - subtopic is strictly nested within intent (clean hierarchy)
+  - no free-text column: this is aggregate operational metadata, not message content. Message-level text analysis must use intents/*.csv
+  - no image/screenshot column present in any tabular asset
+
+ISSUES:
+  ! LEAKAGE: confidence separates outcomes almost perfectly (ai=0.815 vs human=0.461). It was generated FROM resolved_by, so it must never be used as a feature to predict escalation.
+
+========================================================================
+AUDIT: intents/train.csv
+========================================================================
+shape: 2,200 rows x 3 columns
+
+column    dtype  nulls  null_pct  unique  card_pct                             sample
+  text   string      0       0.0    2200     100.0 the tracking hasnt updated in 4...
+intent category      0       0.0      11       0.5                     order_tracking
+ split      str      0       0.0       1       0.0                              train
+
+notes:
+  - exact duplicate texts: 0
+  - no label conflicts: each text maps to exactly one intent
+  - very short messages (<=2 words): 9
+  - class imbalance 400:40 = 10.0x - use macro-F1, not accuracy
+  - no PII patterns detected (emails, phones, cards, IFSC)
+  - 502 messages contain an order reference
+
+no structural issues found
+
+========================================================================
+AUDIT: intents/test_hard.csv
+========================================================================
+shape: 142 rows x 6 columns
+
+          column    dtype  nulls  null_pct  unique  card_pct                             sample
+            text   string      0       0.0     142     100.0 Hello Sir, I hope you are well....
+          intent category      0       0.0      11       7.7              return_refund_request
+secondary_intent      str      0       0.0      11       7.7             return_policy_question
+            note   string      0       0.0     138      97.2 long polite compound, buried in...
+     is_compound     bool      0       0.0       2       1.4                               True
+           split      str      0       0.0       1       0.7                               test
+
+notes:
+  - compound messages (two intents present): 59 (42%) - single-label scoring will undercount performance on these
+  - annotated case types: IMAGE-dependent=4, planted defect=13, boundary case=11, security=3, hallucination bait=5
+  - all 11 intents represented
+
+ISSUES:
+  ! LEAKAGE: 2 test texts also appear in train
+  ! 2 classes have <8 test examples ({'shipping_delivery': np.int64(5), 'account_management': np.int64(5)}) - per-class F1 on these has wide confidence intervals
+
+========================================================================
+AUDIT: db/pacify.db :: orders
+========================================================================
+shape: 2,001 rows x 31 columns
+
+             column          dtype  nulls  null_pct  unique  card_pct              sample
+           order_id            str      0       0.0    2001     100.0      PAC-2026-12345
+        customer_id            str      0       0.0     488      24.4           CUS-10001
+      customer_name            str      0       0.0     488      24.4          Oni Kannan
+             region            str      0       0.0       2       0.1                  IN
+            country            str      0       0.0       7       0.3               India
+        is_business          int64      0       0.0       2       0.1                   0
+                sku            str      0       0.0      14       0.7                PB14
+       product_name            str      0       0.0      14       0.7   Pacify ProBook 14
+           category            str      0       0.0       5       0.2              laptop
+              brand            str      0       0.0       3       0.1              Pacify
+    warranty_months          int64      0       0.0       3       0.1                  24
+     restocking_pct        float64      0       0.0       2       0.1                 0.1
+     is_refurbished          int64      0       0.0       2       0.1                   0
+           quantity          int64      0       0.0       3       0.1                   1
+         unit_price        float64      0       0.0      42       2.1             61655.0
+           discount        float64      0       0.0      29       1.4              3245.0
+    shipping_charge        float64      0       0.0       4       0.2                 0.0
+         total_paid        float64      0       0.0      86       4.3             61655.0
+     payment_method            str      0       0.0       6       0.3         credit_card
+         emi_tenure        float64   1671      83.5       4       0.2                12.0
+     is_no_cost_emi          int64      0       0.0       2       0.1                   0
+         order_date datetime64[us]      0       0.0     399      19.9 2026-08-03 00:00:00
+      dispatch_date datetime64[us]    240      12.0     399      19.9 2026-08-04 00:00:00
+      delivery_date datetime64[us]    591      29.5     387      19.3 2026-08-09 00:00:00
+             status            str      0       0.0       8       0.4           delivered
+    shipping_method            str      0       0.0       2       0.1             express
+          is_opened          int64      0       0.0       2       0.1                   1
+       tracking_ref            str    240      12.0    1761      88.0       TRK2880160025
+days_since_delivery        float64    591      29.5     387      19.3                12.0
+days_since_dispatch        float64    240      12.0     399      19.9                17.0
+     warranty_route            str      0       0.0       2       0.1 pacify_administered
+
+notes:
+  - order_id unique
+  - 591 orders have no delivery_date (30%) - correct for in-transit/cancelled states
+  - no orders delivered before dispatch (date ordering holds)
+  - 29 orders sit within +/-2 days of their return-window boundary
+
+no structural issues found
+
+========================================================================
+AUDIT: documents/*.pdf
+========================================================================
+shape: 47 rows x 7 columns
+
+   column dtype  nulls  null_pct  unique  card_pct                             sample
+      doc   str      0       0.0      13      27.7            customer_service_policy
+     path   str      0       0.0      13      27.7        customer_service_policy.pdf
+is_manual  bool      0       0.0       2       4.3                              False
+     page int64      0       0.0       6      12.8                                  1
+     text   str      0       0.0      47     100.0 PACIFY ELECTRONICS PRIVATE LIMI...
+  n_chars int64      0       0.0      46      97.9                               1957
+  n_words int64      0       0.0      42      89.4                                278
+
+notes:
+  - 13 documents, 47 pages total
+  - every page extracts text successfully
+  - words per page: median 391, range 19-511
+
+no structural issues found
+========================================================================
+AUDIT COMPLETE: 5 datasets, 3 issues flagged
+========================================================================

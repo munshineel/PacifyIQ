@@ -1,0 +1,21 @@
+{
+  "n_cases": 25,
+  "extraction_accuracy": 1.0,
+  "marked_visible": 0.84,
+  "mean_ocr_confidence": 0.8628,
+  "ablation": {
+    "recall_text_only": 0.72,
+    "recall_text_vision": 1.0,
+    "recall_delta": 0.28,
+    "mrr_text_only": 0.5026,
+    "mrr_text_vision": 0.78,
+    "bm25_text_only": 6.79,
+    "bm25_text_vision": 38.14,
+    "fixed": 7,
+    "broken": 0
+  },
+  "edge_cases": {
+    "n": 11,
+    "hallucinated_codes": 0
+  }
+}

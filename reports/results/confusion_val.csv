@@ -1,0 +1,12 @@
+,pred_order_tracking,pred_return_policy_question,pred_return_refund_request,pred_product_information,pred_shipping_delivery,pred_technical_support,pred_warranty_claim,pred_payment_issue,pred_account_management,pred_complaint,pred_out_of_scope
+true_order_tracking,45,0,0,0,0,0,0,0,0,0,0
+true_return_policy_question,0,74,0,0,0,0,0,0,0,0,0
+true_return_refund_request,0,1,48,0,0,0,0,0,0,0,0
+true_product_information,0,0,0,56,0,0,0,0,0,0,0
+true_shipping_delivery,0,0,0,0,56,0,0,0,0,0,0
+true_technical_support,0,0,0,0,0,52,0,0,0,0,0
+true_warranty_claim,0,0,0,0,0,0,51,0,0,0,0
+true_payment_issue,0,0,0,0,1,0,0,12,0,0,0
+true_account_management,0,0,0,0,0,0,0,0,21,0,0
+true_complaint,0,0,0,0,0,0,0,0,0,14,0
+true_out_of_scope,0,0,0,0,0,0,0,0,0,0,2

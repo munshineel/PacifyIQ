@@ -1,0 +1,14 @@
+# Streamlit Cloud reads this at startup.
+[theme]
+primaryColor = "#1a2b45"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f4f5f7"
+textColor = "#22262b"
+font = "sans serif"
+
+[server]
+maxUploadSize = 10          # matches the validator's limit in src/ui/service.py
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false

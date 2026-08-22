@@ -1,0 +1,361 @@
+{
+  "description": "Vision-lift eval. In EVERY case the error code exists ONLY in the image. Run twice: text-only vs text+vision. The delta is the finding.",
+  "protocol": "Compare retrieval accuracy and answer correctness across both conditions.",
+  "note": "Screenshots must be produced separately - see data README.",
+  "cases": [
+    {
+      "id": "V001",
+      "user_text": "my monitor keeps going black randomly",
+      "code_in_image_only": "ERR-DP-0x004",
+      "image_surface": "monitor OSD",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V002",
+      "user_text": "something is wrong with my screen, see photo",
+      "code_in_image_only": "ERR-DP-0x011",
+      "image_surface": "monitor OSD",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V003",
+      "user_text": "this keeps popping up when I try to pay",
+      "code_in_image_only": "PAY-402",
+      "image_surface": "checkout page",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S10"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V004",
+      "user_text": "payment isn't going through",
+      "code_in_image_only": "PAY-511",
+      "image_surface": "bank redirect",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S10"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V005",
+      "user_text": "card not working at checkout",
+      "code_in_image_only": "PAY-309",
+      "image_surface": "checkout page",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S10"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V006",
+      "user_text": "battery is behaving oddly",
+      "code_in_image_only": "BAT-119",
+      "image_surface": "system tray",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        },
+        {
+          "doc": "warranty_policy",
+          "section": "S5"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V007",
+      "user_text": "laptop won't charge properly",
+      "code_in_image_only": "BAT-042",
+      "image_surface": "system tray",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V008",
+      "user_text": "my wifi keeps disconnecting",
+      "code_in_image_only": "WIFI-503",
+      "image_surface": "network dialog",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V009",
+      "user_text": "laptop shows a blue screen sometimes",
+      "code_in_image_only": "SYS-0x0000007B",
+      "image_surface": "stop screen",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V010",
+      "user_text": "computer crashed with this message",
+      "code_in_image_only": "SYS-0x000000EF",
+      "image_surface": "stop screen",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V011",
+      "user_text": "laptop gets really hot and slows down",
+      "code_in_image_only": "THRM-88",
+      "image_surface": "diagnostics app",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V012",
+      "user_text": "something about the fan in diagnostics",
+      "code_in_image_only": "THRM-12",
+      "image_surface": "diagnostics app",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V013",
+      "user_text": "no sound after installing something",
+      "code_in_image_only": "AUD-330",
+      "image_surface": "sound dialog",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V014",
+      "user_text": "keyboard stopped responding",
+      "code_in_image_only": "KEY-018",
+      "image_surface": "diagnostics app",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V015",
+      "user_text": "diagnostics is showing a storage warning",
+      "code_in_image_only": "STO-440",
+      "image_surface": "diagnostics app",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V016",
+      "user_text": "got an error in the memory test",
+      "code_in_image_only": "MEM-221",
+      "image_surface": "diagnostics app",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V017",
+      "user_text": "camera not working in meetings",
+      "code_in_image_only": "CAM-090",
+      "image_surface": "device manager",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V018",
+      "user_text": "screen is very dim now",
+      "code_in_image_only": "DSP-014",
+      "image_surface": "visible symptom",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S6"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V019",
+      "user_text": "monitor says something about the signal",
+      "code_in_image_only": "ERR-HD-0x002",
+      "image_surface": "monitor OSD",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V020",
+      "user_text": "my payment was declined again",
+      "code_in_image_only": "PAY-118",
+      "image_surface": "checkout page",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S10"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V021",
+      "user_text": "limit message at checkout",
+      "code_in_image_only": "PAY-604",
+      "image_surface": "checkout page",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S10"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V022",
+      "user_text": "insufficient balance error",
+      "code_in_image_only": "PAY-207",
+      "image_surface": "checkout page",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S10"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V023",
+      "user_text": "charging stopped by itself",
+      "code_in_image_only": "BAT-007",
+      "image_surface": "system tray",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V024",
+      "user_text": "cannot join my home network",
+      "code_in_image_only": "WIFI-211",
+      "image_surface": "network dialog",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    },
+    {
+      "id": "V025",
+      "user_text": "diagnostics flagged the display cable",
+      "code_in_image_only": "DSP-051",
+      "image_surface": "diagnostics app",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "text_only_expected": "generic or failed retrieval",
+      "with_vision_expected": "exact error-code section retrieved"
+    }
+  ]
+}

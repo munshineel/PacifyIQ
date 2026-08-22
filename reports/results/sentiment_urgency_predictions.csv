@@ -1,0 +1,66 @@
+id,text,true_sentiment,pred_sentiment,sentiment_score,true_urgency,pred_urgency,urgency_score,intent,rationale
+SU001,this is the THIRD time. either refund my money today or i'm doing a chargeback and posting this everywhere,negative,negative,-0.917,high,high,0.8,complaint,repeat contact + legal threat + demand
+SU002,i have been waiting 3 weeks for a refund that you said would take 7 days. this is theft. i am contacting consumer court tomorrow.,negative,negative,-0.917,high,high,0.8,complaint,accusation + legal threat
+SU003,"Absolutely disgusted. Ordered a 90k laptop, arrived with a cracked screen, and your support has ignored 4 emails.",negative,negative,-0.65,high,low,0.298,product_information,strong anger + neglect + high value
+SU004,your agent hung up on me twice. i want a manager. now.,negative,negative,-0.917,high,medium,0.45,complaint,conduct complaint + escalation demand
+SU005,i'm reporting this to consumer court,negative,negative,-0.917,high,high,0.8,complaint,legal threat
+SU006,either fix this today or i'm doing a chargeback,negative,negative,-0.917,high,high,0.8,complaint,ultimatum
+SU007,still no response. still no refund. still nothing. day 19.,negative,negative,-0.65,high,high,0.598,order_tracking,repeated neglect
+SU008,i've called 4 times and nothing has happened,negative,negative,-0.571,high,medium,0.45,complaint,repeat contact
+SU009,"this is fraud, you took my money",negative,negative,-0.917,high,medium,0.45,complaint,accusation
+SU010,im consulting a lawyer about this,negative,negative,-0.917,high,high,0.8,complaint,legal threat
+SU011,worst service ever,negative,negative,-0.917,medium,medium,0.45,complaint,"pure affect, no specific action"
+SU012,you people are useless,negative,negative,-0.917,medium,medium,0.45,complaint,insult without demand
+SU013,bahut ganda service hai,negative,negative,-0.917,medium,medium,0.45,complaint,code-mixed complaint
+SU014,"no one is helping me, very disappointed",negative,negative,-0.917,medium,medium,0.45,complaint,neglect + disappointment
+SU015,worst online shopping experience of my life,negative,negative,-0.917,medium,medium,0.45,complaint,"strong affect, no urgency"
+SU016,card declined but money deducted,negative,negative,-0.324,medium,medium,0.392,payment_issue,money missing
+SU017,i was charged twice for order 12345,negative,negative,-0.324,medium,medium,0.392,payment_issue,billing error
+SU018,"refund initiated 10 days ago, nothing in my account",negative,negative,-0.324,medium,medium,0.392,payment_issue,overdue refund
+SU019,my laptop arrived damaged and i want a refund,negative,negative,-0.74,medium,medium,0.383,return_refund_request,product failure + action
+SU020,paisa kat gaya but order nahi hua,negative,negative,-0.324,medium,medium,0.392,payment_issue,code-mixed payment failure
+SU021,MY LAPTOP IS BROKEN AND NOBODY IS HELPING ME,negative,negative,-0.917,medium,medium,0.45,complaint,shouting + neglect
+SU022,my delivery is 5 days late,negative,negative,-0.65,medium,medium,0.351,shipping_delivery,delay
+SU023,the free gift wasnt in the box,negative,neutral,0.0,medium,low,0.101,shipping_delivery,incomplete order
+SU024,your delivery guy was rude,negative,negative,-0.65,medium,medium,0.351,shipping_delivery,conduct complaint
+SU025,i was promised a callback yesterday,negative,negative,-0.324,medium,medium,0.392,payment_issue,SLA breach
+SU026,my order was cancelled without my permission,negative,neutral,0.0,medium,low,0.096,account_management,unexpected action
+SU027,the courier marked it delivered but i never got it,negative,negative,-0.65,medium,medium,0.351,shipping_delivery,missing parcel
+SU028,i think someone hacked my account,negative,neutral,0.0,high,low,0.096,account_management,security incident
+SU029,"im really disappointed but i understand its policy, can you just tell me the return window",negative,negative,-0.65,low,medium,0.314,return_policy_question,disappointment but calm and informational
+SU030,"i'm not angry, i just want to know why nobody told me about the restocking fee",negative,negative,-0.917,low,medium,0.45,complaint,explicitly de-escalated
+SU031,laptop is 3 years old and the fan is loud,negative,neutral,-0.165,low,low,0.141,warranty_claim,"minor issue, out of warranty"
+SU032,my keyboard has a sticky key,negative,neutral,-0.062,low,low,0.122,technical_support,minor fault
+SU033,screen has dead pixels after 2 months,negative,negative,-0.727,low,medium,0.391,warranty_claim,defect but calm
+SU034,where is my order 12345,neutral,neutral,0.0,low,low,0.108,order_tracking,factual query
+SU035,what is your return policy,neutral,neutral,0.0,low,low,0.064,return_policy_question,informational
+SU036,how many days do i have to return,neutral,neutral,0.0,low,low,0.064,return_policy_question,informational
+SU037,do you ship to germany,neutral,neutral,0.0,low,low,0.101,shipping_delivery,informational
+SU038,does the ProBook 14 have thunderbolt,neutral,neutral,0.0,low,low,0.048,product_information,product query
+SU039,order kahan hai bro delivery kab hoga,neutral,neutral,0.0,low,low,0.108,order_tracking,code-mixed factual
+SU040,can i return opened items,neutral,neutral,0.0,low,low,0.064,return_policy_question,policy query
+SU041,how do i factory reset my laptop,neutral,neutral,-0.062,low,low,0.122,technical_support,how-to
+SU042,what payment methods do you accept,neutral,negative,-0.324,low,medium,0.392,payment_issue,informational
+SU043,is my Phone X still under warranty,neutral,negative,-0.727,low,high,0.571,warranty_claim,status check
+SU044,getting error PAY-402 at checkout,neutral,neutral,-0.062,medium,low,0.122,technical_support,"blocked transaction, no affect"
+SU045,"monitor goes black randomly, see attached",neutral,neutral,-0.062,low,low,0.122,technical_support,symptom report
+SU046,can i change my delivery address,neutral,neutral,0.0,low,low,0.101,shipping_delivery,request
+SU047,how do i claim warranty,neutral,neutral,-0.165,low,low,0.141,warranty_claim,process query
+SU048,what are your support hours,neutral,neutral,0.0,low,low,0.027,out_of_scope,informational
+SU049,i want to return order 12345,neutral,neutral,-0.193,low,low,0.133,return_refund_request,"transactional, no affect"
+SU050,do you have a trade in program,neutral,neutral,0.0,low,low,0.048,product_information,informational
+SU051,12345,neutral,neutral,0.0,low,low,0.108,order_tracking,bare reference
+SU052,hello,neutral,neutral,0.0,low,low,0.027,out_of_scope,greeting
+SU053,ok,neutral,neutral,0.0,low,low,0.027,out_of_scope,acknowledgement
+SU054,Under EU distance selling rules I have 14 days statutory withdrawal regardless of your store policy. Please confirm.,neutral,positive,0.65,low,low,0.064,return_policy_question,assertive but not hostile
+SU055,Please confirm you will reimburse within 14 days of receiving the goods as required,neutral,positive,0.65,low,low,0.048,product_information,"formal, rights-aware"
+SU056,"i need this before diwali, will it make it",neutral,neutral,-0.193,medium,low,0.133,return_refund_request,"deadline pressure, no affect"
+SU057,cancel my order,neutral,neutral,-0.193,low,low,0.133,return_refund_request,transactional
+SU058,thanks for the quick reply earlier. One more thing - the refund amount seems short?,positive,positive,0.56,low,low,0.133,return_refund_request,gratitude then query
+SU059,You guys have been great so far. Just need to sort out this return.,positive,positive,0.65,low,low,0.064,return_policy_question,explicit praise
+SU060,love the laptop! but the charger stopped working,positive,positive,0.39,low,low,0.048,product_information,praise plus fault
+SU061,Hi! Hope you're having a good day. Quick one - when's my order arriving? 12345. Thanks so much!,positive,positive,0.348,low,low,0.108,order_tracking,warm social wrapper
+SU062,"no complaints at all, just wondering about warranty coverage",positive,neutral,-0.165,low,low,0.141,warranty_claim,explicitly not a complaint
+SU063,"Sorry to bother you, I know you must be busy, but my laptop won't charge",positive,negative,-0.324,low,medium,0.392,payment_issue,apologetic and polite despite fault
+SU064,"thanks, that solved it",positive,positive,0.65,low,low,0.027,out_of_scope,resolution
+SU065,"excellent service, very helpful",positive,positive,0.383,low,low,0.2,complaint,praise

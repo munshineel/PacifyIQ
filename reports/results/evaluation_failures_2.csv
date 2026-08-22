@@ -1,0 +1,12 @@
+text,true_s,true_u,pred_s,pred_u
+the free gift wasnt in the box,negative,medium,neutral,low
+my order was cancelled without my permission,negative,medium,neutral,low
+i think someone hacked my account,negative,high,neutral,low
+laptop is 3 years old and the fan is loud,negative,low,neutral,low
+my keyboard has a sticky key,negative,low,neutral,low
+what payment methods do you accept,neutral,low,negative,medium
+is my Phone X still under warranty,neutral,low,negative,high
+Under EU distance selling rules I have 14 days statutory withdrawal regardless of your store policy. Please confirm.,neutral,low,positive,low
+Please confirm you will reimburse within 14 days of receiving the goods as required,neutral,low,positive,low
+"no complaints at all, just wondering about warranty coverage",positive,low,neutral,low
+"Sorry to bother you, I know you must be busy, but my laptop won't charge",positive,low,negative,medium

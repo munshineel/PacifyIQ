@@ -1,0 +1,8 @@
+{
+  "strict_accuracy": 0.6071,
+  "lenient_accuracy": 0.7429,
+  "compound_n": 58,
+  "compound_strict": 0.3966,
+  "compound_lenient": 0.7241,
+  "simple_strict": 0.7561
+}

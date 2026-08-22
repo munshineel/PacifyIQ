@@ -1,0 +1,206 @@
+{
+  "description": "Abstention eval. The corpus genuinely does not contain these. Correct behaviour is to say so, not to guess.",
+  "expected_behaviour": "ABSTAIN",
+  "cases": [
+    {
+      "id": "U001",
+      "question": "Do you offer student discounts?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U002",
+      "question": "Is there a trade-in programme?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U003",
+      "question": "Where is your nearest physical store?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U004",
+      "question": "Can my company lease laptops from you?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U005",
+      "question": "Do you have a loyalty points programme?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U006",
+      "question": "Do you offer gift wrapping?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U007",
+      "question": "What are your carbon emissions per shipment?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U008",
+      "question": "Do you sell accidental damage insurance?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U009",
+      "question": "Can I visit your warehouse?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U010",
+      "question": "Do you offer a military discount?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U011",
+      "question": "What is your CEO's name?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U012",
+      "question": "How many employees does Pacify have?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U013",
+      "question": "When was Pacify founded?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U014",
+      "question": "Do you have a referral programme?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U015",
+      "question": "Can I become a Pacify reseller?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U016",
+      "question": "Do you offer installation services at home?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U017",
+      "question": "Is there a subscription plan for laptops?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U018",
+      "question": "Do you buy back old devices?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U019",
+      "question": "What is the ProBook 14's processor model?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U020",
+      "question": "How much VRAM does the ProBook 16 have?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U021",
+      "question": "What is the Vision 27's response time in milliseconds?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U022",
+      "question": "What panel supplier do you use?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U023",
+      "question": "Does the Tab 11 support stylus input?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U024",
+      "question": "What is the Phone X's screen refresh rate in game mode?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U025",
+      "question": "Do you ship to the United States?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U026",
+      "question": "Do you ship to Australia?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U027",
+      "question": "What is your policy on cryptocurrency payments?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U028",
+      "question": "Can I pay in instalments without a credit card?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U029",
+      "question": "Do you offer priority support for business customers?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U030",
+      "question": "Is there a 24/7 support line?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U031",
+      "question": "What is your net promoter score?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U032",
+      "question": "How many returns do you process monthly?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U033",
+      "question": "Do you have a mobile app for Windows?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U034",
+      "question": "Can I schedule a callback?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U035",
+      "question": "What is the warranty on a battery replaced under warranty in month 23?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U036",
+      "question": "Do you offer data recovery services?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U037",
+      "question": "Is there a fee for cancelling a warranty repair?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U038",
+      "question": "Can I upgrade from PacifyCare+ 12 months to 24 months later?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U039",
+      "question": "Do you price match competitors?",
+      "expected": "abstain"
+    },
+    {
+      "id": "U040",
+      "question": "What happens to returned items?",
+      "expected": "abstain"
+    }
+  ]
+}

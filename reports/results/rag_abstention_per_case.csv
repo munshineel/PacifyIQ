@@ -1,0 +1,41 @@
+id,question,abstained,decision,max_bm25
+U001,Do you offer student discounts?,True,abstain,4.251
+U002,Is there a trade-in programme?,True,abstain,4.712
+U003,Where is your nearest physical store?,True,abstain,5.547
+U004,Can my company lease laptops from you?,True,abstain,5.362
+U005,Do you have a loyalty points programme?,True,abstain,6.377
+U006,Do you offer gift wrapping?,True,abstain,5.436
+U007,What are your carbon emissions per shipment?,True,abstain,4.518
+U008,Do you sell accidental damage insurance?,False,answer,12.35
+U009,Can I visit your warehouse?,True,abstain,3.764
+U010,Do you offer a military discount?,False,caveat,7.417
+U011,What is your CEO's name?,True,abstain,6.949
+U012,How many employees does Pacify have?,True,abstain,6.519
+U013,When was Pacify founded?,True,abstain,5.643
+U014,Do you have a referral programme?,True,abstain,5.317
+U015,Can I become a Pacify reseller?,True,abstain,5.007
+U016,Do you offer installation services at home?,True,abstain,4.704
+U017,Is there a subscription plan for laptops?,True,abstain,6.324
+U018,Do you buy back old devices?,True,abstain,6.213
+U019,What is the ProBook 14's processor model?,False,answer,16.73
+U020,How much VRAM does the ProBook 16 have?,False,answer,15.664
+U021,What is the Vision 27's response time in milliseconds?,False,answer,21.922
+U022,What panel supplier do you use?,True,abstain,5.078
+U023,Does the Tab 11 support stylus input?,False,answer,19.272
+U024,What is the Phone X's screen refresh rate in game mode?,False,answer,17.978
+U025,Do you ship to the United States?,True,abstain,6.805
+U026,Do you ship to Australia?,True,abstain,6.805
+U027,What is your policy on cryptocurrency payments?,True,abstain,6.781
+U028,Can I pay in instalments without a credit card?,False,answer,10.093
+U029,Do you offer priority support for business customers?,True,abstain,6.888
+U030,Is there a 24/7 support line?,False,caveat,7.941
+U031,What is your net promoter score?,True,abstain,6.053
+U032,How many returns do you process monthly?,True,abstain,5.977
+U033,Do you have a mobile app for Windows?,True,abstain,5.978
+U034,Can I schedule a callback?,True,abstain,0.0
+U035,What is the warranty on a battery replaced under warranty in month 23?,False,caveat,9.984
+U036,Do you offer data recovery services?,True,abstain,6.278
+U037,Is there a fee for cancelling a warranty repair?,False,caveat,7.454
+U038,Can I upgrade from PacifyCare+ 12 months to 24 months later?,False,answer,20.479
+U039,Do you price match competitors?,True,abstain,4.4
+U040,What happens to returned items?,True,abstain,6.802

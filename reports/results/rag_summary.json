@@ -1,0 +1,30 @@
+{
+  "backend": "local",
+  "prompt_version": "v3",
+  "generation": {
+    "n_cases": 25,
+    "correctness": 0.24,
+    "partial_credit": 0.5933,
+    "faithfulness": 0.96,
+    "citation_accuracy": 1.0,
+    "citation_recall": 0.5267,
+    "answers_with_citation": 0.88,
+    "escalation_rate": 0.12,
+    "hallucination_rate": 0.04,
+    "n_attempted": 22,
+    "correctness_when_attempted": 0.2727
+  },
+  "abstention": {
+    "n_cases": 40,
+    "abstention_rate": 0.7,
+    "n_wrongly_answered": 12,
+    "mean_bm25_abstained": 5.52,
+    "mean_bm25_answered": 13.94
+  },
+  "false_abstention": {
+    "n_answerable": 60,
+    "n_refused": 8,
+    "false_abstention_rate": 0.1333
+  },
+  "balanced_abstention_score": 0.6067
+}

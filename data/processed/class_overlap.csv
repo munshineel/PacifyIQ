@@ -1,0 +1,56 @@
+intent_a,intent_b,jaccard,shared_terms
+order_tracking,return_refund_request,0.25,"12345, for, my, order, pac-2026-12345, pac-2026-12350"
+return_policy_question,shipping_delivery,0.176,"can, do, i, is, to, what"
+account_management,shipping_delivery,0.176,"do, how, i, my, to, you"
+order_tracking,payment_issue,0.143,"for, is, my, order, where"
+shipping_delivery,technical_support,0.143,"do, how, i, is, my"
+account_management,technical_support,0.111,"do, how, i, my"
+account_management,complaint,0.111,"hai, i, to, you"
+complaint,shipping_delivery,0.111,"i, is, to, you"
+payment_issue,return_refund_request,0.111,"for, i, my, order"
+return_policy_question,return_refund_request,0.111,"for, i, return, to"
+payment_issue,warranty_claim,0.111,"for, i, is, my"
+out_of_scope,product_information,0.111,"is, of, the, what"
+complaint,return_policy_question,0.111,"hai, i, is, to"
+product_information,return_policy_question,0.111,"for, is, the, what"
+technical_support,warranty_claim,0.111,"i, is, my, screen"
+shipping_delivery,warranty_claim,0.111,"i, is, my, on"
+complaint,return_refund_request,0.111,"a, i, this, to"
+account_management,return_policy_question,0.111,"do, hai, i, to"
+account_management,return_refund_request,0.081,"i, my, to"
+order_tracking,warranty_claim,0.081,"for, is, my"
+payment_issue,technical_support,0.081,"i, is, my"
+complaint,out_of_scope,0.081,"a, is, you"
+out_of_scope,return_policy_question,0.081,"is, the, what"
+return_policy_question,warranty_claim,0.081,"for, i, is"
+return_refund_request,shipping_delivery,0.081,"i, my, to"
+return_refund_request,warranty_claim,0.081,"for, i, my"
+return_policy_question,technical_support,0.081,"do, i, is"
+payment_issue,shipping_delivery,0.081,"i, is, my"
+payment_issue,return_policy_question,0.081,"for, i, is"
+out_of_scope,shipping_delivery,0.081,"is, what, you"
+order_tracking,shipping_delivery,0.081,"delivery, is, my"
+complaint,payment_issue,0.053,"i, is"
+account_management,out_of_scope,0.053,"me, you"
+order_tracking,product_information,0.053,"for, is"
+complaint,warranty_claim,0.053,"i, is"
+account_management,payment_issue,0.053,"i, my"
+account_management,warranty_claim,0.053,"i, my"
+complaint,technical_support,0.053,"i, is"
+order_tracking,return_policy_question,0.053,"for, is"
+product_information,shipping_delivery,0.053,"is, what"
+product_information,technical_support,0.053,"is, monitor"
+return_refund_request,technical_support,0.053,"i, my"
+product_information,warranty_claim,0.053,"for, is"
+payment_issue,product_information,0.053,"for, is"
+order_tracking,technical_support,0.053,"is, my"
+account_management,order_tracking,0.026,my
+complaint,product_information,0.026,is
+out_of_scope,technical_support,0.026,is
+order_tracking,out_of_scope,0.026,is
+complaint,order_tracking,0.026,is
+out_of_scope,return_refund_request,0.026,a
+out_of_scope,payment_issue,0.026,is
+out_of_scope,warranty_claim,0.026,is
+product_information,return_refund_request,0.026,for
+account_management,product_information,0.0,

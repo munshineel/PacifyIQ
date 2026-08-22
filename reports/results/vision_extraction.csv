@@ -1,0 +1,26 @@
+id,expected,extracted,correct,code_shown,evidence,surface,image_type,ocr_conf,confidence
+V001,ERR-DP-0X004,ERR-DP-0X004,True,True,inferred,monitor OSD,monitor on-screen display,0.89,0.61
+V002,ERR-DP-0X011,ERR-DP-0X011,True,True,inferred,monitor OSD,monitor on-screen display,0.91,0.62
+V003,PAY-402,PAY-402,True,True,visible,checkout page,payment error dialog,0.93,0.95
+V004,PAY-511,PAY-511,True,True,visible,bank redirect,payment error dialog,0.93,0.95
+V005,PAY-309,PAY-309,True,True,visible,checkout page,payment error dialog,0.94,0.95
+V006,BAT-119,BAT-119,True,True,visible,system tray,system notification,0.87,0.65
+V007,BAT-042,BAT-042,True,True,visible,system tray,system notification,0.89,0.66
+V008,WIFI-503,WIFI-503,True,True,visible,network dialog,network settings dialog,0.85,0.83
+V009,SYS-0X0000007B,SYS-0X0000007B,True,True,visible,stop screen,system stop/boot error screen,0.86,0.93
+V010,SYS-0X000000EF,SYS-0X000000EF,True,True,visible,stop screen,system stop/boot error screen,0.85,0.93
+V011,THRM-88,THRM-88,True,True,visible,diagnostics app,diagnostics application,0.91,0.95
+V012,THRM-12,THRM-12,True,True,visible,diagnostics app,diagnostics application,0.91,0.95
+V013,AUD-330,AUD-330,True,True,visible,sound dialog,sound settings dialog,0.86,0.84
+V014,KEY-018,KEY-018,True,True,visible,diagnostics app,diagnostics application,0.91,0.95
+V015,STO-440,STO-440,True,True,visible,diagnostics app,diagnostics application,0.9,0.95
+V016,MEM-221,MEM-221,True,True,visible,diagnostics app,diagnostics application,0.91,0.95
+V017,CAM-090,CAM-090,True,True,visible,device manager,device manager,0.88,0.85
+V018,DSP-014,-,True,False,unknown,visible symptom,no usable content,0.0,0.0
+V019,ERR-HD-0X002,ERR-HD-0X002,True,True,inferred,monitor OSD,monitor on-screen display,0.89,0.61
+V020,PAY-118,PAY-118,True,True,visible,checkout page,payment error dialog,0.93,0.95
+V021,PAY-604,PAY-604,True,True,visible,checkout page,payment error dialog,0.93,0.95
+V022,PAY-207,PAY-207,True,True,visible,checkout page,payment error dialog,0.93,0.95
+V023,BAT-007,BAT-007,True,True,visible,system tray,system notification,0.9,0.85
+V024,WIFI-211,WIFI-211,True,True,visible,network dialog,network settings dialog,0.88,0.84
+V025,DSP-051,DSP-051,True,True,visible,diagnostics app,diagnostics application,0.91,0.95

@@ -1,0 +1,5 @@
+model,cv_macro_f1_mean,cv_macro_f1_std,cv_macro_f1_min,cv_macro_f1_max
+TF-IDF union(char=1.5) + LinearSVC,0.9847,0.0159,0.9544,1.0
+TF-IDF union(char=1.0) + LinearSVC,0.9857,0.0162,0.9544,1.0
+TF-IDF union + LinearSVC,0.9812,0.013,0.9559,0.993
+TF-IDF union + LinearSVC (no mask),0.9823,0.0151,0.9544,1.0

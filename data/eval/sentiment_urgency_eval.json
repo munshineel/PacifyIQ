@@ -1,0 +1,462 @@
+{
+  "description": "Hand-annotated sentiment and urgency for evaluating the rule-based scorers.",
+  "limitation": "Annotations authored by an LLM, not a human. Single annotator, so no inter-annotator agreement is available. Adequate for detecting gross calibration errors, inadequate for a confident accuracy claim.",
+  "why_not_supervised": "The dataset provides no text with sentiment labels: ticket_history.csv has sentiment but no message text, and the intent CSVs have text but no sentiment. Supervised text->sentiment is therefore not possible.",
+  "cases": [
+    {
+      "id": "SU001",
+      "text": "this is the THIRD time. either refund my money today or i'm doing a chargeback and posting this everywhere",
+      "sentiment": "negative",
+      "urgency": "high",
+      "rationale": "repeat contact + legal threat + demand"
+    },
+    {
+      "id": "SU002",
+      "text": "i have been waiting 3 weeks for a refund that you said would take 7 days. this is theft. i am contacting consumer court tomorrow.",
+      "sentiment": "negative",
+      "urgency": "high",
+      "rationale": "accusation + legal threat"
+    },
+    {
+      "id": "SU003",
+      "text": "Absolutely disgusted. Ordered a 90k laptop, arrived with a cracked screen, and your support has ignored 4 emails.",
+      "sentiment": "negative",
+      "urgency": "high",
+      "rationale": "strong anger + neglect + high value"
+    },
+    {
+      "id": "SU004",
+      "text": "your agent hung up on me twice. i want a manager. now.",
+      "sentiment": "negative",
+      "urgency": "high",
+      "rationale": "conduct complaint + escalation demand"
+    },
+    {
+      "id": "SU005",
+      "text": "i'm reporting this to consumer court",
+      "sentiment": "negative",
+      "urgency": "high",
+      "rationale": "legal threat"
+    },
+    {
+      "id": "SU006",
+      "text": "either fix this today or i'm doing a chargeback",
+      "sentiment": "negative",
+      "urgency": "high",
+      "rationale": "ultimatum"
+    },
+    {
+      "id": "SU007",
+      "text": "still no response. still no refund. still nothing. day 19.",
+      "sentiment": "negative",
+      "urgency": "high",
+      "rationale": "repeated neglect"
+    },
+    {
+      "id": "SU008",
+      "text": "i've called 4 times and nothing has happened",
+      "sentiment": "negative",
+      "urgency": "high",
+      "rationale": "repeat contact"
+    },
+    {
+      "id": "SU009",
+      "text": "this is fraud, you took my money",
+      "sentiment": "negative",
+      "urgency": "high",
+      "rationale": "accusation"
+    },
+    {
+      "id": "SU010",
+      "text": "im consulting a lawyer about this",
+      "sentiment": "negative",
+      "urgency": "high",
+      "rationale": "legal threat"
+    },
+    {
+      "id": "SU011",
+      "text": "worst service ever",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "pure affect, no specific action"
+    },
+    {
+      "id": "SU012",
+      "text": "you people are useless",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "insult without demand"
+    },
+    {
+      "id": "SU013",
+      "text": "bahut ganda service hai",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "code-mixed complaint"
+    },
+    {
+      "id": "SU014",
+      "text": "no one is helping me, very disappointed",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "neglect + disappointment"
+    },
+    {
+      "id": "SU015",
+      "text": "worst online shopping experience of my life",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "strong affect, no urgency"
+    },
+    {
+      "id": "SU016",
+      "text": "card declined but money deducted",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "money missing"
+    },
+    {
+      "id": "SU017",
+      "text": "i was charged twice for order 12345",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "billing error"
+    },
+    {
+      "id": "SU018",
+      "text": "refund initiated 10 days ago, nothing in my account",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "overdue refund"
+    },
+    {
+      "id": "SU019",
+      "text": "my laptop arrived damaged and i want a refund",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "product failure + action"
+    },
+    {
+      "id": "SU020",
+      "text": "paisa kat gaya but order nahi hua",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "code-mixed payment failure"
+    },
+    {
+      "id": "SU021",
+      "text": "MY LAPTOP IS BROKEN AND NOBODY IS HELPING ME",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "shouting + neglect"
+    },
+    {
+      "id": "SU022",
+      "text": "my delivery is 5 days late",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "delay"
+    },
+    {
+      "id": "SU023",
+      "text": "the free gift wasnt in the box",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "incomplete order"
+    },
+    {
+      "id": "SU024",
+      "text": "your delivery guy was rude",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "conduct complaint"
+    },
+    {
+      "id": "SU025",
+      "text": "i was promised a callback yesterday",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "SLA breach"
+    },
+    {
+      "id": "SU026",
+      "text": "my order was cancelled without my permission",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "unexpected action"
+    },
+    {
+      "id": "SU027",
+      "text": "the courier marked it delivered but i never got it",
+      "sentiment": "negative",
+      "urgency": "medium",
+      "rationale": "missing parcel"
+    },
+    {
+      "id": "SU028",
+      "text": "i think someone hacked my account",
+      "sentiment": "negative",
+      "urgency": "high",
+      "rationale": "security incident"
+    },
+    {
+      "id": "SU029",
+      "text": "im really disappointed but i understand its policy, can you just tell me the return window",
+      "sentiment": "negative",
+      "urgency": "low",
+      "rationale": "disappointment but calm and informational"
+    },
+    {
+      "id": "SU030",
+      "text": "i'm not angry, i just want to know why nobody told me about the restocking fee",
+      "sentiment": "negative",
+      "urgency": "low",
+      "rationale": "explicitly de-escalated"
+    },
+    {
+      "id": "SU031",
+      "text": "laptop is 3 years old and the fan is loud",
+      "sentiment": "negative",
+      "urgency": "low",
+      "rationale": "minor issue, out of warranty"
+    },
+    {
+      "id": "SU032",
+      "text": "my keyboard has a sticky key",
+      "sentiment": "negative",
+      "urgency": "low",
+      "rationale": "minor fault"
+    },
+    {
+      "id": "SU033",
+      "text": "screen has dead pixels after 2 months",
+      "sentiment": "negative",
+      "urgency": "low",
+      "rationale": "defect but calm"
+    },
+    {
+      "id": "SU034",
+      "text": "where is my order 12345",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "factual query"
+    },
+    {
+      "id": "SU035",
+      "text": "what is your return policy",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "informational"
+    },
+    {
+      "id": "SU036",
+      "text": "how many days do i have to return",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "informational"
+    },
+    {
+      "id": "SU037",
+      "text": "do you ship to germany",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "informational"
+    },
+    {
+      "id": "SU038",
+      "text": "does the ProBook 14 have thunderbolt",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "product query"
+    },
+    {
+      "id": "SU039",
+      "text": "order kahan hai bro delivery kab hoga",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "code-mixed factual"
+    },
+    {
+      "id": "SU040",
+      "text": "can i return opened items",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "policy query"
+    },
+    {
+      "id": "SU041",
+      "text": "how do i factory reset my laptop",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "how-to"
+    },
+    {
+      "id": "SU042",
+      "text": "what payment methods do you accept",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "informational"
+    },
+    {
+      "id": "SU043",
+      "text": "is my Phone X still under warranty",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "status check"
+    },
+    {
+      "id": "SU044",
+      "text": "getting error PAY-402 at checkout",
+      "sentiment": "neutral",
+      "urgency": "medium",
+      "rationale": "blocked transaction, no affect"
+    },
+    {
+      "id": "SU045",
+      "text": "monitor goes black randomly, see attached",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "symptom report"
+    },
+    {
+      "id": "SU046",
+      "text": "can i change my delivery address",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "request"
+    },
+    {
+      "id": "SU047",
+      "text": "how do i claim warranty",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "process query"
+    },
+    {
+      "id": "SU048",
+      "text": "what are your support hours",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "informational"
+    },
+    {
+      "id": "SU049",
+      "text": "i want to return order 12345",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "transactional, no affect"
+    },
+    {
+      "id": "SU050",
+      "text": "do you have a trade in program",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "informational"
+    },
+    {
+      "id": "SU051",
+      "text": "12345",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "bare reference"
+    },
+    {
+      "id": "SU052",
+      "text": "hello",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "greeting"
+    },
+    {
+      "id": "SU053",
+      "text": "ok",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "acknowledgement"
+    },
+    {
+      "id": "SU054",
+      "text": "Under EU distance selling rules I have 14 days statutory withdrawal regardless of your store policy. Please confirm.",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "assertive but not hostile"
+    },
+    {
+      "id": "SU055",
+      "text": "Please confirm you will reimburse within 14 days of receiving the goods as required",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "formal, rights-aware"
+    },
+    {
+      "id": "SU056",
+      "text": "i need this before diwali, will it make it",
+      "sentiment": "neutral",
+      "urgency": "medium",
+      "rationale": "deadline pressure, no affect"
+    },
+    {
+      "id": "SU057",
+      "text": "cancel my order",
+      "sentiment": "neutral",
+      "urgency": "low",
+      "rationale": "transactional"
+    },
+    {
+      "id": "SU058",
+      "text": "thanks for the quick reply earlier. One more thing - the refund amount seems short?",
+      "sentiment": "positive",
+      "urgency": "low",
+      "rationale": "gratitude then query"
+    },
+    {
+      "id": "SU059",
+      "text": "You guys have been great so far. Just need to sort out this return.",
+      "sentiment": "positive",
+      "urgency": "low",
+      "rationale": "explicit praise"
+    },
+    {
+      "id": "SU060",
+      "text": "love the laptop! but the charger stopped working",
+      "sentiment": "positive",
+      "urgency": "low",
+      "rationale": "praise plus fault"
+    },
+    {
+      "id": "SU061",
+      "text": "Hi! Hope you're having a good day. Quick one - when's my order arriving? 12345. Thanks so much!",
+      "sentiment": "positive",
+      "urgency": "low",
+      "rationale": "warm social wrapper"
+    },
+    {
+      "id": "SU062",
+      "text": "no complaints at all, just wondering about warranty coverage",
+      "sentiment": "positive",
+      "urgency": "low",
+      "rationale": "explicitly not a complaint"
+    },
+    {
+      "id": "SU063",
+      "text": "Sorry to bother you, I know you must be busy, but my laptop won't charge",
+      "sentiment": "positive",
+      "urgency": "low",
+      "rationale": "apologetic and polite despite fault"
+    },
+    {
+      "id": "SU064",
+      "text": "thanks, that solved it",
+      "sentiment": "positive",
+      "urgency": "low",
+      "rationale": "resolution"
+    },
+    {
+      "id": "SU065",
+      "text": "excellent service, very helpful",
+      "sentiment": "positive",
+      "urgency": "low",
+      "rationale": "praise"
+    }
+  ]
+}

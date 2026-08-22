@@ -1,0 +1,18 @@
+{
+  "n_cases": 65,
+  "sentiment": {
+    "macro_f1": 0.8083,
+    "weighted_f1": 0.8319,
+    "accuracy": 0.8308,
+    "lexicon_only_macro_f1": 0.7533,
+    "intent_prior_delta": 0.055
+  },
+  "urgency": {
+    "macro_f1": 0.7365,
+    "weighted_f1": 0.7678,
+    "accuracy": 0.7692,
+    "within_one_level": 0.9538,
+    "high_scored_low": 2
+  },
+  "limitation": "Annotations authored by an LLM, not a human. Single annotator, so no inter-annotator agreement is available. Adequate for detecting gross calibration errors, inadequate for a confident accuracy claim."
+}

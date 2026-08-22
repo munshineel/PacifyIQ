@@ -1,0 +1,16 @@
+{
+  "baseline": {
+    "recall@5": 0.875,
+    "mrr": 0.6645,
+    "coverage@5": 0.7931,
+    "abstention": 0.7
+  },
+  "routed": {
+    "recall@5": 0.8667,
+    "mrr": 0.6624,
+    "coverage@5": 0.7889,
+    "abstention": 0.7
+  },
+  "queries_fixed": 5,
+  "queries_broken": 6
+}

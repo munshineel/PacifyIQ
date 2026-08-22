@@ -1,0 +1,12 @@
+file,kind,validation,code,code_evidence,useful,contributed,conf,reason
+valid_clear.png,valid,ok,PAY-402,visible,True,True,0.95,
+blurry_mild.png,blurry,warning,-,unknown,False,False,0.14,text was readable but contained no error inf
+blurry_severe.png,blurry,warning,-,unknown,False,False,0.0,no legible text could be extracted
+too_dark.png,low quality,warning,PAY-402,visible,True,True,0.95,
+tiny_downscaled.png,low resolution,warning,-,unknown,False,False,0.0,no legible text could be extracted
+irrelevant_product.png,irrelevant,ok,-,unknown,False,False,0.14,text was readable but contained no error inf
+blank_white.png,no information,warning,-,unknown,False,False,0.0,image appears blank or uniform
+noise.png,no information,ok,-,unknown,False,False,0.0,no legible text could be extracted
+oversized_5200x3600.png,oversized,warning,PAY-402,visible,True,True,0.95,
+unsupported_format.bmp,unsupported format,rejected,-,unknown,False,False,0.0,unsupported file type '.bmp'. Accepted: .gif
+corrupt_truncated.png,corrupt,rejected,-,unknown,False,False,0.0,corrupt or unreadable image (OSError)

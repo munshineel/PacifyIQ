@@ -1,0 +1,10 @@
+component,headline metric,value,n,scoring,baseline
+1. Intent classification,macro_f1,0.611,140,deterministic,0.091
+2. Sentiment / urgency,sentiment_macro_f1,0.808,65,curated,0.333
+3. Retrieval,recall@5,0.883,120,deterministic,0.025
+4. RAG answer quality,faithfulness,1.0,25,deterministic,-
+5. Screenshot understanding,extraction_accuracy,1.0,25,deterministic,-
+6/7. Agent tools,tool_selection_recall,0.917,30,curated,-
+8. Groundedness,detection_rate,1.0,8,curated,-
+9. Escalation decisions,accuracy,0.933,30,curated,0.7333333333333334
+10. End-to-end resolution,outcome_accuracy,0.807,57,curated,-

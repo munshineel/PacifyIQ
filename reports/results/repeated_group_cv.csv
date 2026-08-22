@@ -1,0 +1,6 @@
+model,repeated_group_f1_mean,repeated_group_f1_std,repeated_group_f1_min,repeated_group_f1_max
+TF-IDF union(char=1.0) + LinearSVC,0.9427,0.0077,0.928,0.95
+TF-IDF union(char=1.5) + LinearSVC,0.9398,0.0122,0.9275,0.9604
+TF-IDF union(char=1.0) + LogReg,0.9285,0.0144,0.9025,0.9435
+TF-IDF union + LinearSVC (no mask),0.9249,0.0095,0.9099,0.937
+TF-IDF union + LinearSVC,0.9205,0.0128,0.9099,0.9448

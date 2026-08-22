@@ -1,0 +1,1614 @@
+{
+  "description": "Retrieval eval. gold_sections are (doc, section) pairs. Metrics: Recall@K, Precision@K, MRR, nDCG@K.",
+  "resolution": "Match section headers to chunk IDs at eval time.",
+  "cases": [
+    {
+      "id": "R001",
+      "question": "What is the return window for an opened laptop?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S2"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R002",
+      "question": "How many days do I have to return a sealed monitor?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S2"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R003",
+      "question": "Is there a restocking fee on opened phones?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S10"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R004",
+      "question": "Who pays return shipping if I changed my mind?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S9"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R005",
+      "question": "What counts as an opened item?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S3"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R006",
+      "question": "How long do I have to report a damaged delivery?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S6"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R007",
+      "question": "What items cannot be returned at all?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S5"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R008",
+      "question": "How long does warehouse inspection take?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S11"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R009",
+      "question": "What is the return window for a bulk order of 6 laptops?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S2"
+        },
+        {
+          "doc": "return_policy_v2",
+          "section": "S13"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R010",
+      "question": "Can I exchange for a different colour?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S12"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R011",
+      "question": "How long does a UPI refund take?",
+      "gold_sections": [
+        {
+          "doc": "refund_policy",
+          "section": "S3"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R012",
+      "question": "How long does a credit card refund take?",
+      "gold_sections": [
+        {
+          "doc": "refund_policy",
+          "section": "S3"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R013",
+      "question": "How is the refund amount calculated?",
+      "gold_sections": [
+        {
+          "doc": "refund_policy",
+          "section": "S4"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R014",
+      "question": "Do I get the original delivery charge back?",
+      "gold_sections": [
+        {
+          "doc": "refund_policy",
+          "section": "S4"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R015",
+      "question": "Will you refund the EMI interest I already paid?",
+      "gold_sections": [
+        {
+          "doc": "refund_policy",
+          "section": "S7"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R016",
+      "question": "I bought on no-cost EMI. How much do I get back if I return?",
+      "gold_sections": [
+        {
+          "doc": "refund_policy",
+          "section": "S7"
+        },
+        {
+          "doc": "payment_policy",
+          "section": "S2"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R017",
+      "question": "How do I get a refund on a cash on delivery order?",
+      "gold_sections": [
+        {
+          "doc": "refund_policy",
+          "section": "S8"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R018",
+      "question": "What is the store credit bonus?",
+      "gold_sections": [
+        {
+          "doc": "refund_policy",
+          "section": "S6"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R019",
+      "question": "What happens if my refund fails?",
+      "gold_sections": [
+        {
+          "doc": "refund_policy",
+          "section": "S9"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R020",
+      "question": "Can I claim if the price drops after I buy?",
+      "gold_sections": [
+        {
+          "doc": "refund_policy",
+          "section": "S10"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R021",
+      "question": "How much will I get back for a 64900 laptop I opened and want to return?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S10"
+        },
+        {
+          "doc": "return_policy_v2",
+          "section": "S9"
+        },
+        {
+          "doc": "refund_policy",
+          "section": "S4"
+        },
+        {
+          "doc": "refund_policy",
+          "section": "S3"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R022",
+      "question": "How long is the warranty on a Pacify laptop?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S1"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R023",
+      "question": "How long is the warranty on a Northwind laptop?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S1"
+        },
+        {
+          "doc": "warranty_policy",
+          "section": "S8"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R024",
+      "question": "What is the warranty on accessories?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S1"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R025",
+      "question": "How many dead pixels before you replace the screen?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S6"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R026",
+      "question": "Is my battery covered if it degrades?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S5"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R027",
+      "question": "Is liquid damage covered?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S3"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R028",
+      "question": "When does the warranty period start?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S7"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R029",
+      "question": "My Northwind laptop is faulty. Who handles the repair?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S8"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R030",
+      "question": "How long does a warranty repair take?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S12"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R031",
+      "question": "Can I buy extended warranty after 2 months?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S9"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R032",
+      "question": "Does installing Linux void my warranty?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S13"
+        }
+      ],
+      "type": "single",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R033",
+      "question": "Can I transfer the warranty if I sell the laptop?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S14"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R034",
+      "question": "What is the free shipping threshold?",
+      "gold_sections": [
+        {
+          "doc": "shipping_policy",
+          "section": "S3"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R035",
+      "question": "How long does standard shipping take?",
+      "gold_sections": [
+        {
+          "doc": "shipping_policy",
+          "section": "S2"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R036",
+      "question": "How long from placing my order to it arriving?",
+      "gold_sections": [
+        {
+          "doc": "shipping_policy",
+          "section": "S4"
+        },
+        {
+          "doc": "shipping_policy",
+          "section": "S2"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R037",
+      "question": "Can I change my delivery address after dispatch?",
+      "gold_sections": [
+        {
+          "doc": "shipping_policy",
+          "section": "S6"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R038",
+      "question": "Which EU countries do you ship to?",
+      "gold_sections": [
+        {
+          "doc": "shipping_policy",
+          "section": "S1"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R039",
+      "question": "What happens after 3 failed delivery attempts?",
+      "gold_sections": [
+        {
+          "doc": "shipping_policy",
+          "section": "S7"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R040",
+      "question": "Do I get compensation if delivery is late?",
+      "gold_sections": [
+        {
+          "doc": "shipping_policy",
+          "section": "S8"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R041",
+      "question": "Who pays customs on an EU order?",
+      "gold_sections": [
+        {
+          "doc": "shipping_policy",
+          "section": "S9"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R042",
+      "question": "What is white glove delivery?",
+      "gold_sections": [
+        {
+          "doc": "shipping_policy",
+          "section": "S10"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R043",
+      "question": "What is the minimum order for EMI?",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S2"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R044",
+      "question": "What is the cash on delivery limit?",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S3"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R045",
+      "question": "My payment failed but I was charged. When do I get it back?",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S4"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R046",
+      "question": "I was charged twice. What happens?",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S5"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R047",
+      "question": "Do you store my card number?",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S6"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R048",
+      "question": "What does PAY-402 mean?",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S10"
+        },
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R049",
+      "question": "What does PAY-511 mean?",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S10"
+        },
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R050",
+      "question": "How long is a gift card valid?",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S7"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R051",
+      "question": "What are your support hours?",
+      "gold_sections": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S1"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R052",
+      "question": "How quickly do you respond to email?",
+      "gold_sections": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S2"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R053",
+      "question": "How do I escalate my issue?",
+      "gold_sections": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S3"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R054",
+      "question": "How long to resolve a complaint?",
+      "gold_sections": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S4"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R055",
+      "question": "Who is the grievance officer?",
+      "gold_sections": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S5"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R056",
+      "question": "What do you need to verify my identity?",
+      "gold_sections": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S6"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R057",
+      "question": "How do I delete my account and my data?",
+      "gold_sections": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S7"
+        },
+        {
+          "doc": "customer_service_policy",
+          "section": "S8"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R058",
+      "question": "Am I talking to a bot?",
+      "gold_sections": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S12"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R059",
+      "question": "Can the AI approve my refund?",
+      "gold_sections": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S12"
+        }
+      ],
+      "type": "single",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R060",
+      "question": "What does ERR-DP-0x004 mean?",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        },
+        {
+          "doc": "manual_vision27",
+          "section": "S6"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R061",
+      "question": "My monitor keeps going black randomly.",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S3"
+        }
+      ],
+      "type": "single",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R062",
+      "question": "What does BAT-119 mean?",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R063",
+      "question": "What does WIFI-503 mean?",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R064",
+      "question": "What does SYS-0x0000007B mean?",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R065",
+      "question": "My laptop will not turn on. What should I do?",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S2"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R066",
+      "question": "How do I factory reset my laptop?",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S11"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R067",
+      "question": "When should I stop troubleshooting and claim warranty?",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S12"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R068",
+      "question": "My laptop is overheating.",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S7"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R069",
+      "question": "How do I check my battery health?",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S4"
+        },
+        {
+          "doc": "manual_probook14",
+          "section": "S7"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R070",
+      "question": "How many USB ports does the ProBook 16 have?",
+      "gold_sections": [
+        {
+          "doc": "product_faq",
+          "section": "S8"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R071",
+      "question": "What resolution is the Vision 27?",
+      "gold_sections": [
+        {
+          "doc": "product_faq",
+          "section": "S8"
+        },
+        {
+          "doc": "manual_vision27",
+          "section": "S2"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R072",
+      "question": "Does the Phone X have wireless charging?",
+      "gold_sections": [
+        {
+          "doc": "product_faq",
+          "section": "S8"
+        },
+        {
+          "doc": "manual_phonex",
+          "section": "S4"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R073",
+      "question": "What is the difference between the ProBook 14 and 16?",
+      "gold_sections": [
+        {
+          "doc": "product_faq",
+          "section": "S8"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R074",
+      "question": "How much does the ProBook 14 weigh?",
+      "gold_sections": [
+        {
+          "doc": "product_faq",
+          "section": "S8"
+        },
+        {
+          "doc": "manual_probook14",
+          "section": "S2"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R075",
+      "question": "Is the Phone X waterproof?",
+      "gold_sections": [
+        {
+          "doc": "manual_phonex",
+          "section": "S5"
+        },
+        {
+          "doc": "product_faq",
+          "section": "S8"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R076",
+      "question": "Can I upgrade RAM on the ProBook 14?",
+      "gold_sections": [
+        {
+          "doc": "product_faq",
+          "section": "S2"
+        },
+        {
+          "doc": "manual_probook14",
+          "section": "S9"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R077",
+      "question": "What refresh rate does the Vision 27 support?",
+      "gold_sections": [
+        {
+          "doc": "product_faq",
+          "section": "S8"
+        },
+        {
+          "doc": "manual_vision27",
+          "section": "S2"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R078",
+      "question": "I am in Germany. How long do I have to return an opened laptop?",
+      "gold_sections": [
+        {
+          "doc": "eu_regional_addendum",
+          "section": "S2"
+        },
+        {
+          "doc": "return_policy_v2",
+          "section": "S2"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R079",
+      "question": "As an EU customer do I pay a restocking fee?",
+      "gold_sections": [
+        {
+          "doc": "eu_regional_addendum",
+          "section": "S4"
+        }
+      ],
+      "type": "single",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R080",
+      "question": "Do I have to give a reason for returning in the EU?",
+      "gold_sections": [
+        {
+          "doc": "eu_regional_addendum",
+          "section": "S2"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R081",
+      "question": "How quickly must you reimburse an EU customer?",
+      "gold_sections": [
+        {
+          "doc": "eu_regional_addendum",
+          "section": "S5"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R082",
+      "question": "What is the EU statutory guarantee period?",
+      "gold_sections": [
+        {
+          "doc": "eu_regional_addendum",
+          "section": "S7"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R083",
+      "question": "How long do I have to return my laptop?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S2"
+        },
+        {
+          "doc": "shipping_policy",
+          "section": "S11"
+        }
+      ],
+      "type": "contradiction",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R084",
+      "question": "Is there a 30 day satisfaction guarantee?",
+      "gold_sections": [
+        {
+          "doc": "shipping_policy",
+          "section": "S11"
+        },
+        {
+          "doc": "return_policy_v2",
+          "section": "S2"
+        }
+      ],
+      "type": "contradiction",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R085",
+      "question": "What is your return policy?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S2"
+        }
+      ],
+      "type": "version",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R086",
+      "question": "Do you charge a restocking fee?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S10"
+        }
+      ],
+      "type": "version",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R087",
+      "question": "What is the difference between an exchange and a replacement?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S12"
+        },
+        {
+          "doc": "warranty_policy",
+          "section": "S11"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R088",
+      "question": "My item is damaged. What do I do?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S6"
+        },
+        {
+          "doc": "warranty_policy",
+          "section": "S3"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R089",
+      "question": "When will my money be processed?",
+      "gold_sections": [
+        {
+          "doc": "refund_policy",
+          "section": "S3"
+        },
+        {
+          "doc": "payment_policy",
+          "section": "S4"
+        }
+      ],
+      "type": "ambiguous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R090",
+      "question": "When will I get my money back?",
+      "gold_sections": [
+        {
+          "doc": "refund_policy",
+          "section": "S3"
+        },
+        {
+          "doc": "payment_policy",
+          "section": "S4"
+        }
+      ],
+      "type": "ambiguous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R091",
+      "question": "I opened the box only to check for damage. Does that count as opened?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S3"
+        },
+        {
+          "doc": "return_policy_v2",
+          "section": "S6"
+        },
+        {
+          "doc": "technical_support_faq",
+          "section": "S1"
+        }
+      ],
+      "type": "ambiguous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R092",
+      "question": "My laptop broke on day 8. Return or warranty?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S6"
+        },
+        {
+          "doc": "warranty_policy",
+          "section": "S4"
+        }
+      ],
+      "type": "ambiguous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R093",
+      "question": "how long do i have to send back my laptop",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S2"
+        },
+        {
+          "doc": "product_faq",
+          "section": "S4"
+        }
+      ],
+      "type": "duplicate",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R094",
+      "question": "whats the warranty length",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S1"
+        },
+        {
+          "doc": "product_faq",
+          "section": "S5"
+        }
+      ],
+      "type": "duplicate",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R095",
+      "question": "when do i get my refund",
+      "gold_sections": [
+        {
+          "doc": "refund_policy",
+          "section": "S3"
+        },
+        {
+          "doc": "product_faq",
+          "section": "S4"
+        }
+      ],
+      "type": "duplicate",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R096",
+      "question": "is delivery free",
+      "gold_sections": [
+        {
+          "doc": "shipping_policy",
+          "section": "S3"
+        },
+        {
+          "doc": "product_faq",
+          "section": "S3"
+        }
+      ],
+      "type": "duplicate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R097",
+      "question": "how many dead pixels",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S6"
+        },
+        {
+          "doc": "product_faq",
+          "section": "S5"
+        }
+      ],
+      "type": "duplicate",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R098",
+      "question": "ERR-DP-0x011",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        },
+        {
+          "doc": "manual_vision27",
+          "section": "S6"
+        }
+      ],
+      "type": "lexical",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R099",
+      "question": "THRM-88",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "type": "lexical",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R100",
+      "question": "POL-WAR-001 S6",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S6"
+        }
+      ],
+      "type": "lexical",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R101",
+      "question": "KEY-018",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "type": "lexical",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R102",
+      "question": "STO-440",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "type": "lexical",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R103",
+      "question": "PAY-604",
+      "gold_sections": [
+        {
+          "doc": "payment_policy",
+          "section": "S10"
+        },
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "type": "lexical",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R104",
+      "question": "DSP-014",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        },
+        {
+          "doc": "warranty_policy",
+          "section": "S6"
+        }
+      ],
+      "type": "lexical",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R105",
+      "question": "AUD-330",
+      "gold_sections": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "type": "lexical",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R106",
+      "question": "Do you deliver on Sundays?",
+      "gold_sections": [
+        {
+          "doc": "shipping_policy",
+          "section": "S2"
+        },
+        {
+          "doc": "product_faq",
+          "section": "S3"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R107",
+      "question": "What is PacifyCare+?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S9"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R108",
+      "question": "Can I return a redeemed gift card?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S5"
+        },
+        {
+          "doc": "payment_policy",
+          "section": "S7"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R109",
+      "question": "Do I need the original box to return?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S4"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R110",
+      "question": "What if I keep the free gift from a bundle?",
+      "gold_sections": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S4"
+        }
+      ],
+      "type": "single",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R111",
+      "question": "Can I get a loaner during repair?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S12"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R112",
+      "question": "What is the inspection fee if my claim is rejected?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S3"
+        }
+      ],
+      "type": "single",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R113",
+      "question": "Is image retention on OLED covered?",
+      "gold_sections": [
+        {
+          "doc": "warranty_policy",
+          "section": "S6"
+        },
+        {
+          "doc": "manual_phonex",
+          "section": "S6"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R114",
+      "question": "Which cable do I need for 75Hz on the Vision 27?",
+      "gold_sections": [
+        {
+          "doc": "manual_vision27",
+          "section": "S4"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R115",
+      "question": "Will the Vision 27 charge my ProBook 16?",
+      "gold_sections": [
+        {
+          "doc": "manual_vision27",
+          "section": "S4"
+        },
+        {
+          "doc": "manual_probook14",
+          "section": "S2"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "hard"
+    },
+    {
+      "id": "R116",
+      "question": "What is in the box with a ProBook 14?",
+      "gold_sections": [
+        {
+          "doc": "manual_probook14",
+          "section": "S1"
+        }
+      ],
+      "type": "single",
+      "difficulty": "easy"
+    },
+    {
+      "id": "R117",
+      "question": "How do I open the recovery environment?",
+      "gold_sections": [
+        {
+          "doc": "manual_probook14",
+          "section": "S6"
+        },
+        {
+          "doc": "technical_support_faq",
+          "section": "S11"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R118",
+      "question": "Can I opt out of order emails?",
+      "gold_sections": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S9"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R119",
+      "question": "What happens if I am abusive to an agent?",
+      "gold_sections": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S10"
+        }
+      ],
+      "type": "single",
+      "difficulty": "medium"
+    },
+    {
+      "id": "R120",
+      "question": "How long do you keep chat transcripts?",
+      "gold_sections": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S11"
+        },
+        {
+          "doc": "customer_service_policy",
+          "section": "S8"
+        }
+      ],
+      "type": "multi",
+      "difficulty": "medium"
+    }
+  ]
+}

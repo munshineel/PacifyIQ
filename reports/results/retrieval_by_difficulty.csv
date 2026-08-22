@@ -1,0 +1,4 @@
+difficulty,recall@5_mean,coverage@5_mean,mrr_mean,ndcg@5_mean,n
+hard,0.839,0.699,0.588,0.649,31
+medium,0.88,0.8,0.685,0.705,50
+easy,0.897,0.859,0.698,0.814,39

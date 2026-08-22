@@ -1,0 +1,55 @@
+component,metric,value,n,scoring,baseline,target,status
+1. Intent classification,macro_f1,0.6107,140,deterministic,0.091,0.6,meets target
+1. Intent classification,weighted_f1,0.6025,140,deterministic,,,
+1. Intent classification,accuracy,0.6071,140,deterministic,0.182,,
+1. Intent classification,macro_precision,0.6297,140,deterministic,,,
+1. Intent classification,macro_recall,0.6612,140,deterministic,,,
+1. Intent classification,lenient_accuracy,0.7429,140,curated,,,
+2. Sentiment / urgency,sentiment_macro_f1,0.8083,65,curated,0.333,0.7,meets target
+2. Sentiment / urgency,sentiment_weighted_f1,0.8319,65,curated,,,
+2. Sentiment / urgency,intent_prior_gain,0.055,65,curated,,,
+2. Sentiment / urgency,urgency_macro_f1,0.7365,65,curated,,,
+2. Sentiment / urgency,urgency_within_one_level,0.9538,65,curated,,,
+2. Sentiment / urgency,high_urgency_scored_low,2.0,65,curated,,,
+3. Retrieval,recall@5,0.8833,120,deterministic,0.025,0.85,meets target
+3. Retrieval,recall@1,0.575,120,deterministic,,,
+3. Retrieval,recall@3,0.8167,120,deterministic,,,
+3. Retrieval,recall@10,0.9333,120,deterministic,,,
+3. Retrieval,precision@5,0.2533,120,deterministic,,,
+3. Retrieval,coverage@5,0.8139,120,deterministic,,,
+3. Retrieval,mrr,0.7056,120,deterministic,,,
+3. Retrieval,ndcg@5,0.7818,120,deterministic,,,
+4. RAG answer quality,faithfulness,1.0,25,deterministic,,0.95,meets target
+4. RAG answer quality,citation_accuracy,1.0,25,deterministic,,,
+4. RAG answer quality,citation_recall,0.5267,25,curated,,,
+4. RAG answer quality,answers_with_citation,0.88,25,deterministic,,,
+4. RAG answer quality,correctness,0.24,25,curated,,,
+4. RAG answer quality,partial_credit,0.5933,25,curated,,,
+4. RAG answer quality,abstention_rate,0.7,40,curated,,0.7,meets target
+4. RAG answer quality,false_abstention_rate,0.1333,60,curated,,0.15,meets target
+4. RAG answer quality,balanced_abstention,0.6067,100,curated,,,
+4. RAG answer quality,hallucination_rate,0.0,25,deterministic,,0.05,meets target
+5. Screenshot understanding,extraction_accuracy,1.0,25,deterministic,,0.9,meets target
+5. Screenshot understanding,vision_recall_lift,0.28,25,deterministic,,,
+5. Screenshot understanding,recall_text_only,0.72,25,deterministic,,,
+5. Screenshot understanding,recall_with_vision,1.0,25,deterministic,,,
+5. Screenshot understanding,marked_visible,0.84,25,deterministic,,,
+5. Screenshot understanding,invented_codes,0.0,6,deterministic,,0.0,meets target
+6/7. Agent tools,tool_selection_recall,0.9167,30,curated,,0.8,meets target
+6/7. Agent tools,tool_selection_precision,0.8506,30,curated,,,
+6/7. Agent tools,argument_extraction,1.0,16,deterministic,,0.95,meets target
+6/7. Agent tools,tool_execution_errors,0.0,30,deterministic,,0.0,meets target
+6/7. Agent tools,mean_tools_per_request,1.9667,30,deterministic,,,
+8. Groundedness,detection_rate,1.0,8,curated,,1.0,meets target
+8. Groundedness,false_flag_rate,0.0,3,curated,,0.0,meets target
+8. Groundedness,balanced,1.0,11,curated,,,
+9. Escalation decisions,accuracy,0.9333,30,curated,0.7333333333333334,0.9,meets target
+9. Escalation decisions,precision,0.875,30,curated,,,
+9. Escalation decisions,recall,0.875,30,curated,,,
+9. Escalation decisions,f1,0.875,30,curated,,,
+9. Escalation decisions,adversarial_handled,1.0,30,curated,,,
+10. End-to-end resolution,outcome_accuracy,0.807,57,curated,,0.85,below target
+10. End-to-end resolution,outcome_and_content,0.7544,57,curated,,,
+10. End-to-end resolution,correct_on_answerable,0.84,25,curated,,,
+10. End-to-end resolution,correct_on_unanswerable,0.7812,32,curated,,,
+10. End-to-end resolution,unsafe_resolutions,5.0,57,deterministic,,0.0,below target

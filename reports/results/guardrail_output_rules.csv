@@ -1,0 +1,9 @@
+case,severity,rules
+grounded,info,-
+fabricated number,escalate,unsupported_number
+fabricated citation,escalate,fabricated_citation
+invented error code,escalate,"unsupported_number,unsupported_error_code"
+claims refund approved,block,forbidden_claim
+promises delivery,block,forbidden_claim
+offers a discount,block,forbidden_claim
+leaks internals,block,internal_leak

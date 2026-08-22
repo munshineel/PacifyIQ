@@ -1,0 +1,17 @@
+model,split,n,accuracy,balanced_acc,macro_f1,weighted_f1,macro_precision,macro_recall,random_split_macro_f1,test_macro_f1,gap,fit_s,masked
+TF-IDF union(char=1.5) + LinearSVC,val_group,433,0.9954,0.9912,0.994,0.9953,0.9972,0.9912,0.9851,0.5761,0.4179,0.32,True
+TF-IDF union(char=1.0) + LinearSVC,val_group,433,0.9954,0.9912,0.994,0.9953,0.9972,0.9912,0.9929,0.6098,0.3842,0.25,True
+TF-IDF union + LinearSVC,val_group,433,0.9885,0.9782,0.9845,0.9882,0.9922,0.9782,0.9929,0.5726,0.4119,0.27,True
+TF-IDF union + LinearSVC (no mask),val_group,433,0.9885,0.9782,0.9845,0.9882,0.9922,0.9782,0.9929,0.5778,0.4067,0.23,False
+TF-IDF union(char=1.0) + LogReg,val_group,433,0.9908,0.9881,0.9712,0.991,0.9608,0.9881,0.9929,0.5984,0.3728,0.37,True
+TF-IDF union(char=1.5) + LogReg,val_group,433,0.9908,0.9881,0.9712,0.991,0.9608,0.9881,0.9824,0.5734,0.3978,0.3,True
+TF-IDF word + SGD,val_group,433,0.9815,0.9535,0.9673,0.981,0.986,0.9535,0.9852,0.5442,0.4231,0.08,True
+TF-IDF union + LogReg (no mask),val_group,433,0.9861,0.9769,0.9657,0.9862,0.9619,0.9769,0.9929,0.593,0.3727,0.38,False
+TF-IDF union + LogReg,val_group,433,0.9838,0.9752,0.9616,0.9839,0.9559,0.9752,0.9929,0.5863,0.3753,0.4,True
+TF-IDF word + LinearSVC,val_group,433,0.9792,0.9616,0.939,0.9797,0.933,0.9616,0.9929,0.5095,0.4295,0.11,True
+TF-IDF word + LogReg (no mask),val_group,433,0.9607,0.9498,0.9125,0.9622,0.8933,0.9498,0.9929,0.5593,0.3531,0.12,False
+TF-IDF word + LogReg,val_group,433,0.9584,0.9484,0.9066,0.9605,0.8861,0.9484,0.9929,0.5223,0.3843,0.15,True
+TF-IDF char + LogReg,val_group,433,0.9446,0.931,0.8815,0.9504,0.8861,0.931,0.9802,0.6162,0.2653,0.33,True
+TF-IDF word + ComplementNB,val_group,433,0.9053,0.8258,0.8457,0.9071,0.8985,0.8258,0.9311,0.4793,0.3664,0.07,True
+stratified baseline,val_group,433,0.1178,0.0909,0.0872,0.1173,0.0916,0.0909,0.0997,0.0851,0.0021,0.06,True
+majority baseline,val_group,433,0.1039,0.0909,0.0171,0.0196,0.0094,0.0909,0.028,0.0154,0.0017,0.07,True

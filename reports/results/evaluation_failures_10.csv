@@ -1,0 +1,12 @@
+id,category,text,expected,actual,outcome_ok,content_ok,reason,note,both_ok
+E008,simple_faq,Do you ship to Germany?,resolved,escalated,False,True,no_supporting_documentation,EU serviceability,False
+E011,ambiguous,When will I get my money back?,escalated,resolved,False,True,-,DEFECT-08: refund vs failed-paymen,False
+E012,ambiguous,I opened the box only to check for damage. D,escalated,resolved,False,True,-,DEFECT-04: 'opened' is under-speci,False
+E013,ambiguous,My laptop broke on day 8. Is that a return o,escalated,resolved,False,True,-,DEFECT-12: both remedies arguable,False
+E016,missing_info,Can I return it?,needs_information,escalated,False,True,no_supporting_documentation,"unresolved pronoun, no antecedent",False
+E023,unanswerable,What is the ProBook 14's processor model?,escalated,resolved,False,True,-,"topic covered, this specific fact ",False
+E028,hallucination_trap,How much VRAM does the ProBook 16 have?,escalated,resolved,False,True,-,not published anywhere,False
+E048,meta,Am I talking to a bot?,resolved,escalated,False,True,relationship_issue_requires_human,POL-CS-001 S12.2 requires a truthf,False
+E049,meta,Can the AI approve my refund?,resolved,escalated,False,True,no_supporting_documentation,S12.4 - the assistant has no such ,False
+E050,meta,How do I escalate my issue?,resolved,escalated,False,True,identity_verification_required,S3 escalation procedure,False
+EI05,screenshot_irrelevant,here is a picture of it,escalated,refused,False,True,-,"product photo, no error info",False

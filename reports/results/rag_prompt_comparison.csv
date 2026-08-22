@@ -1,0 +1,4 @@
+prompt,correctness,partial,faithfulness,citation_acc,with_citation,abstention,escalation
+v1,0.24,0.58,1.0,1.0,0.92,0.7,0.08
+v2,0.24,0.58,1.0,1.0,0.92,0.7,0.08
+v3,0.24,0.58,1.0,1.0,0.92,0.7,0.08

@@ -1,0 +1,17 @@
+{
+  "strategy": "rrf_w",
+  "recall@1": 0.5417,
+  "recall@3": 0.7417,
+  "recall@5": 0.875,
+  "recall@10": 0.9417,
+  "precision@1": 0.5417,
+  "precision@3": 0.3028,
+  "precision@5": 0.235,
+  "coverage@5": 0.7931,
+  "coverage@10": 0.8917,
+  "ndcg@5": 0.7263,
+  "ndcg@10": 0.7828,
+  "mrr": 0.6645,
+  "n_queries": 120,
+  "answered_pct": 87.5
+}

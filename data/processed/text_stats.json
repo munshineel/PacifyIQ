@@ -1,0 +1,38 @@
+{
+  "train_vocabulary": {
+    "n_tokens": 14591,
+    "vocab_size": 1031,
+    "type_token_ratio": 0.0707,
+    "hapax_count": 471,
+    "hapax_pct": 45.7,
+    "types_for_90pct_coverage": 308
+  },
+  "test_vocabulary": {
+    "n_tokens": 1455,
+    "vocab_size": 538,
+    "type_token_ratio": 0.3698,
+    "hapax_count": 354,
+    "hapax_pct": 65.8,
+    "types_for_90pct_coverage": 393
+  },
+  "drift": {
+    "train_vocab": 1031,
+    "test_vocab": 538,
+    "oov_types": 264,
+    "oov_type_rate_pct": 49.1,
+    "oov_token_rate_pct": 22.6,
+    "shared_vocab": 274
+  },
+  "template_train": {
+    "n_messages": 2200,
+    "n_unique_skeletons": 1847,
+    "messages_sharing_skeleton": 591,
+    "template_rate_pct": 26.9
+  },
+  "template_test": {
+    "n_messages": 142,
+    "n_unique_skeletons": 142,
+    "messages_sharing_skeleton": 0,
+    "template_rate_pct": 0.0
+  }
+}

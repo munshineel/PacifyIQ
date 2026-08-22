@@ -1,0 +1,13 @@
+{
+  "n_tools": 13,
+  "scenarios_passed": 10,
+  "scenarios_total": 10,
+  "tools_per_scenario": {
+    "min": 0,
+    "max": 5,
+    "mean": 1.7
+  },
+  "tier3_blocked": 3,
+  "tool_selection_accuracy": 0.9167,
+  "escalation_accuracy": 0.9333
+}

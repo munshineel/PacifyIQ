@@ -1,0 +1,35 @@
+[project]
+name = "pacifyiq"
+version = "0.1.0"
+description = "AI customer support intelligence and agent platform"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "--tb=short --strict-markers"
+markers = [
+    "data: dataset integrity, preprocessing and validation",
+    "classification: intent, sentiment and urgency models",
+    "retrieval: chunking, embedding and search",
+    "rag: grounded generation and abstention",
+    "vision: screenshot validation and extraction",
+    "tools: tool contract and execution",
+    "agent: planning, execution and stopping",
+    "guardrails: safety rules at every stage",
+    "ui: service layer and error handling",
+    "integration: full pipeline, multiple components",
+    "slow: takes more than a few seconds",
+]
+
+[tool.pyright]
+include = ["src", "scripts", "tests"]
+typeCheckingMode = "basic"

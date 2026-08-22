@@ -1,0 +1,9 @@
+{
+  "adversarial_detection_rate": 1.0,
+  "false_positive_rate": 0.0102,
+  "balanced_score": 0.9898,
+  "n_adversarial": 30,
+  "n_benign": 295,
+  "end_to_end_correct": 9,
+  "end_to_end_total": 9
+}

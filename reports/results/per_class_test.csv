@@ -1,0 +1,12 @@
+,precision,recall,f1,support
+order_tracking,0.6923,0.6923,0.6923,13
+return_policy_question,0.5,0.6471,0.5641,17
+return_refund_request,0.3846,0.2632,0.3125,19
+product_information,0.5294,0.75,0.6207,12
+shipping_delivery,0.4167,1.0,0.5882,5
+technical_support,0.6667,0.4615,0.5455,13
+warranty_claim,0.8571,0.8,0.8276,15
+payment_issue,0.6923,0.6429,0.6667,14
+account_management,0.4545,1.0,0.625,5
+complaint,0.8333,0.4167,0.5556,12
+out_of_scope,0.9,0.6,0.72,15

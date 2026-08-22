@@ -1,0 +1,11 @@
+true,predicted,count,pct_of_true
+return_refund_request,return_policy_question,8,42.1
+return_policy_question,return_refund_request,3,17.6
+return_policy_question,product_information,3,17.6
+order_tracking,shipping_delivery,2,15.4
+out_of_scope,account_management,2,13.3
+technical_support,return_refund_request,2,15.4
+return_refund_request,account_management,2,10.5
+complaint,shipping_delivery,2,16.7
+return_refund_request,product_information,1,5.3
+order_tracking,return_policy_question,1,7.7

@@ -1,0 +1,551 @@
+[
+  {
+    "scenario": "Simple FAQ",
+    "text": "What is your return policy for opened laptops?",
+    "note": "informational: no order in play, so no operational tool should run",
+    "decision": {
+      "intent": "return_policy_question",
+      "actions_taken": [
+        "search_knowledge_base"
+      ],
+      "evidence_used": [
+        "knowledge_base(5 chunks)"
+      ],
+      "confidence": 0.83,
+      "resolution_status": "resolved_with_caveat",
+      "escalation_required": false,
+      "escalation_reason": null,
+      "answer": "Item category Condition on return Restocking fee Laptops Opened 10% of item value Monitors Opened 10% of item value Phones and tablets Opened 10% of item value Accessories Opened Nil Any category Unopened, seal intact Nil S10.2 No restocking fee is applied where the return arises from: (a) a defect or damage reported under S6; Item category Condition Return window Laptops, phones, tablets, monitors Unopened, retail seal intact 30 calendar days Laptops, phones, tablets, monitors Opened 14 calendar days Accessories (keyboards, audio, cables, Unopened or opened 30 calendar days cases) Bulk and business orders (5 or more units Any 7 calendar days of any single SKU) Refurbished units Any 14 calendar days S2.2 All windows in the table at S2.1 run from the date of delivery as recorded by the delivery partner. S3.3 An item whose outer retail seal is intact but whose outer shipping carton has been opened is not \"opened\" for the purposes of this Policy. Scope and application S1.1 This Policy governs the return of goods purchased from Pacify Electronics Private Limited (\"Pacify\", \"we\", \"us\") through www.pacify.com or the Pacify mobile application.",
+      "citations": [
+        "POL-RET-002, p.4, S10",
+        "POL-RET-002, p.1, S2",
+        "POL-RET-002, p.2, S3",
+        "POL-RET-002, p.1, S1"
+      ],
+      "missing_information": [],
+      "caveats": [
+        "All evidence comes from a single document."
+      ],
+      "tools_considered": [
+        "search_knowledge_base"
+      ],
+      "tools_skipped": [],
+      "tier3_blocked": [],
+      "stop_reason": "plan_complete",
+      "steps": 1,
+      "trajectory": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "What is your return policy for opened laptops?",
+            "top_k": 5
+          },
+          "status": "ok"
+        }
+      ],
+      "guardrails": {
+        "output": {
+          "stage": "output",
+          "severity": "info",
+          "blocked": false,
+          "must_escalate": false,
+          "rules_fired": [],
+          "findings": []
+        }
+      },
+      "replans": 0,
+      "latency_ms": 61.00358000003325,
+      "ticket_id": null
+    }
+  },
+  {
+    "scenario": "Billing issue",
+    "text": "I was charged twice for order PAC-2026-12364",
+    "note": "needs live payment state AND the policy on double charges",
+    "decision": {
+      "intent": "payment_issue",
+      "actions_taken": [
+        "get_order",
+        "check_payment",
+        "search_knowledge_base"
+      ],
+      "evidence_used": [
+        "knowledge_base(5 chunks)",
+        "get_order",
+        "check_payment"
+      ],
+      "confidence": 0.83,
+      "resolution_status": "resolved_with_caveat",
+      "escalation_required": false,
+      "escalation_reason": null,
+      "answer": "S3.2 A handling fee of Rs 50 applies to every cash on delivery order. The fee is not refundable in any circumstances, including where the order is returned. S3.5 Refund of a cash on delivery order requires bank details from the customer. A refund arises only where an order was completed and subsequently returned, and is governed by POL-REF-001.",
+      "citations": [
+        "POL-PAY-001, p.2, S3",
+        "POL-PAY-001, p.2, S4"
+      ],
+      "missing_information": [],
+      "caveats": [
+        "Supporting evidence is weak; treat this answer as provisional."
+      ],
+      "tools_considered": [
+        "get_order",
+        "check_payment",
+        "search_knowledge_base"
+      ],
+      "tools_skipped": [],
+      "tier3_blocked": [],
+      "stop_reason": "plan_complete",
+      "steps": 3,
+      "trajectory": [
+        {
+          "tool": "get_order",
+          "args": {
+            "order_id": "PAC-2026-12364"
+          },
+          "status": "ok"
+        },
+        {
+          "tool": "check_payment",
+          "args": {
+            "order_id": "PAC-2026-12364"
+          },
+          "status": "ok"
+        },
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "I was charged twice for order PAC-2026-12364",
+            "top_k": 5
+          },
+          "status": "ok"
+        }
+      ],
+      "guardrails": {
+        "output": {
+          "stage": "output",
+          "severity": "info",
+          "blocked": false,
+          "must_escalate": false,
+          "rules_fired": [],
+          "findings": []
+        }
+      },
+      "replans": 0,
+      "latency_ms": 31.985468999891964,
+      "ticket_id": null
+    }
+  },
+  {
+    "scenario": "Refund request",
+    "text": "I want to return order PAC-2026-12345 and get my money back",
+    "note": "tier 3: eligibility and amount computed, but the refund is never issued",
+    "decision": {
+      "intent": "return_refund_request",
+      "actions_taken": [
+        "get_order",
+        "check_policy",
+        "check_policy",
+        "search_knowledge_base",
+        "escalate_to_human"
+      ],
+      "evidence_used": [
+        "knowledge_base(5 chunks)",
+        "get_order",
+        "check_policy",
+        "check_policy"
+      ],
+      "confidence": 0.0,
+      "resolution_status": "escalated",
+      "escalation_required": true,
+      "escalation_reason": "mutating_action_requires_approval",
+      "answer": "I've gathered everything needed and passed it to a colleague who can authorise this. Reference: TKT-681F7D.",
+      "citations": [],
+      "missing_information": [],
+      "caveats": [],
+      "tools_considered": [
+        "get_order",
+        "check_policy",
+        "check_policy",
+        "search_knowledge_base"
+      ],
+      "tools_skipped": [],
+      "tier3_blocked": [],
+      "stop_reason": "plan_complete",
+      "steps": 5,
+      "trajectory": [
+        {
+          "tool": "get_order",
+          "args": {
+            "order_id": "PAC-2026-12345"
+          },
+          "status": "ok"
+        },
+        {
+          "tool": "check_policy",
+          "args": {
+            "order_id": "PAC-2026-12345",
+            "policy": "return"
+          },
+          "status": "ok"
+        },
+        {
+          "tool": "check_policy",
+          "args": {
+            "order_id": "PAC-2026-12345",
+            "policy": "refund"
+          },
+          "status": "ok"
+        },
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "I want to return order PAC-2026-12345 and get my money back",
+            "top_k": 5
+          },
+          "status": "ok"
+        }
+      ],
+      "guardrails": {},
+      "replans": 0,
+      "latency_ms": 18.27635399990868,
+      "ticket_id": "TKT-681F7D"
+    }
+  },
+  {
+    "scenario": "Technical problem",
+    "text": "My Pacify ProBook 14 won't turn on, order PAC-2026-12356",
+    "note": "symptom vocabulary must override the order_tracking pull",
+    "decision": {
+      "intent": "technical_support",
+      "actions_taken": [
+        "get_order",
+        "search_knowledge_base"
+      ],
+      "evidence_used": [
+        "knowledge_base(5 chunks)",
+        "get_order"
+      ],
+      "confidence": 0.83,
+      "resolution_status": "resolved",
+      "escalation_required": false,
+      "escalation_reason": null,
+      "answer": "In the box Pacify ProBook 14 \u00b7 65 W USB-C power adapter \u00b7 USB-C to USB-C cable (1.8 m) \u00b7 Quick start leaflet \u00b7 Warranty card Warranty: 24 months from the date of delivery. The Pacify range Model Type Price (Rs) Brand Pacify ProBook 14 Laptop 64,900 Pacify Pacify ProBook 16 Laptop 89,900 Pacify Pacify ProBook 14 Lite Laptop 47,900 Pacify Pacify Phone X Phone 38,900 Pacify Pacify Phone X Pro Phone 54,900 Pacify Pacify Tab 11 Tablet 29,900 Pacify Pacify Vision 27 Monitor 24,900 Pacify Pacify Vision 32 Monitor 41,900 Pacify Pacify KeyLite Keyboard 3,499 Pacify Pacify SoundPods Earbuds 5,999 Pacify Northwind Ultra 15 Laptop 72,900 Northwind Kestrel Note 9 Phone 31,900 Kestrel Pacify Electronics Private Limited. Service S9.1 The ProBook 14 has no user-serviceable internal components.",
+      "citations": [
+        "MAN-PB14-001, p.1, S1",
+        "FAQ-PRD-001, p.5, S7",
+        "MAN-PB14-001, p.2, S9"
+      ],
+      "missing_information": [],
+      "caveats": [],
+      "tools_considered": [
+        "get_order",
+        "search_knowledge_base"
+      ],
+      "tools_skipped": [],
+      "tier3_blocked": [],
+      "stop_reason": "plan_complete",
+      "steps": 2,
+      "trajectory": [
+        {
+          "tool": "get_order",
+          "args": {
+            "order_id": "PAC-2026-12356"
+          },
+          "status": "ok"
+        },
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "My Pacify ProBook 14 won't turn on, order PAC-2026-12356",
+            "top_k": 5
+          },
+          "status": "ok"
+        }
+      ],
+      "guardrails": {
+        "output": {
+          "stage": "output",
+          "severity": "info",
+          "blocked": false,
+          "must_escalate": false,
+          "rules_fired": [],
+          "findings": []
+        }
+      },
+      "replans": 0,
+      "latency_ms": 23.19361799982289,
+      "ticket_id": null
+    }
+  },
+  {
+    "scenario": "Screenshot technical problem",
+    "text": "my payment isn't working, see attached",
+    "note": "the error code exists only in the image",
+    "decision": {
+      "intent": "payment_issue",
+      "actions_taken": [
+        "analyze_screenshot",
+        "search_knowledge_base",
+        "search_knowledge_base"
+      ],
+      "evidence_used": [
+        "knowledge_base(5 chunks)",
+        "screenshot"
+      ],
+      "confidence": 0.83,
+      "resolution_status": "resolved",
+      "escalation_required": false,
+      "escalation_reason": null,
+      "answer": "Code Meaning What the customer should do PAY-402 Payment gateway timeout. S10.2 Codes beginning PAY- relate to payment processing. S10.2 Codes beginning PAY- relate to payment processing. Payment error codes S10.1 The following codes may be displayed at checkout or on the bank authentication page.",
+      "citations": [
+        "POL-PAY-001, p.3, S10"
+      ],
+      "missing_information": [
+        "order_id"
+      ],
+      "caveats": [],
+      "tools_considered": [
+        "analyze_screenshot",
+        "search_knowledge_base"
+      ],
+      "tools_skipped": [],
+      "tier3_blocked": [],
+      "stop_reason": "plan_complete",
+      "steps": 3,
+      "trajectory": [
+        {
+          "tool": "analyze_screenshot",
+          "args": {
+            "image_path": "/home/claude/pacifyiq/data/eval/screenshots/V003_PAY_402.png"
+          },
+          "status": "ok"
+        },
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "my payment isn't working, see attached",
+            "top_k": 5
+          },
+          "status": "ok"
+        },
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "my payment isn't working, see attached PAY-402",
+            "top_k": 5
+          },
+          "status": "ok"
+        }
+      ],
+      "guardrails": {
+        "output": {
+          "stage": "output",
+          "severity": "info",
+          "blocked": false,
+          "must_escalate": false,
+          "rules_fired": [],
+          "findings": []
+        }
+      },
+      "replans": 1,
+      "latency_ms": 841.3817980001568,
+      "ticket_id": null
+    }
+  },
+  {
+    "scenario": "Missing information",
+    "text": "where is my order?",
+    "note": "must ask rather than call get_order with no id",
+    "decision": {
+      "intent": "order_tracking",
+      "actions_taken": [],
+      "evidence_used": [],
+      "confidence": 0.0,
+      "resolution_status": "needs_information",
+      "escalation_required": false,
+      "escalation_reason": null,
+      "answer": "I can look that up - could you give me your order reference (it looks like PAC-2026-12345)?",
+      "citations": [],
+      "missing_information": [
+        "order_id"
+      ],
+      "caveats": [],
+      "tools_considered": [],
+      "tools_skipped": [],
+      "tier3_blocked": [],
+      "stop_reason": "plan_complete",
+      "steps": 0,
+      "trajectory": [],
+      "guardrails": {},
+      "replans": 0,
+      "latency_ms": 1.7230610001206514,
+      "ticket_id": null
+    }
+  },
+  {
+    "scenario": "Conflicting information",
+    "text": "How long do I have to return my laptop? Your site says 30 days.",
+    "note": "DEFECT-01: two current documents disagree",
+    "decision": {
+      "intent": "return_policy_question",
+      "actions_taken": [
+        "search_knowledge_base"
+      ],
+      "evidence_used": [
+        "knowledge_base(5 chunks)"
+      ],
+      "confidence": 0.83,
+      "resolution_status": "resolved",
+      "escalation_required": false,
+      "escalation_reason": null,
+      "answer": "Returns and refunds How long do I have to return my laptop? Two weeks from the day it arrives, if you have opened it. A customer purchases a laptop for Rs 64,900 with free shipping, opens it, and returns it within 14 days having changed their mind: Line Amount (Rs) Item price actually paid 64,900 Less restocking fee at 10% (6,490) Less return shipping (450) Plus original outbound shipping 0 Refund payable 57,960 S4.5 Worked example. Wait \u2014 is it 14 days or 30 days? For an opened laptop, phone, tablet, or monitor it is 14 days. Item category Condition Return window Laptops, phones, tablets, monitors Unopened, retail seal intact 30 calendar days Laptops, phones, tablets, monitors Opened 14 calendar days Accessories (keyboards, audio, cables, Unopened or opened 30 calendar days cases) Bulk and business orders (5 or more units Any 7 calendar days of any single SKU) Refurbished units Any 14 calendar days S2.2 All windows in the table at S2.1 run from the date of delivery as recorded by the delivery partner.",
+      "citations": [
+        "FAQ-PRD-001, p.3, S4",
+        "POL-REF-001, p.2, S4",
+        "POL-RET-002, p.1, S2"
+      ],
+      "missing_information": [],
+      "caveats": [],
+      "tools_considered": [
+        "search_knowledge_base"
+      ],
+      "tools_skipped": [],
+      "tier3_blocked": [],
+      "stop_reason": "plan_complete",
+      "steps": 1,
+      "trajectory": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "How long do I have to return my laptop? Your site says 30 days.",
+            "top_k": 5
+          },
+          "status": "ok"
+        }
+      ],
+      "guardrails": {
+        "output": {
+          "stage": "output",
+          "severity": "info",
+          "blocked": false,
+          "must_escalate": false,
+          "rules_fired": [],
+          "findings": []
+        }
+      },
+      "replans": 0,
+      "latency_ms": 19.61348200006796,
+      "ticket_id": null
+    }
+  },
+  {
+    "scenario": "Unsupported request",
+    "text": "can you write me a python script to sort a list",
+    "note": "out of scope: nothing to retrieve, nothing to act on",
+    "decision": {
+      "intent": "out_of_scope",
+      "actions_taken": [],
+      "evidence_used": [],
+      "confidence": 0.6,
+      "resolution_status": "refused",
+      "escalation_required": false,
+      "escalation_reason": null,
+      "answer": "I can help with orders, returns, warranty, shipping, payments and technical problems with Pacify products. I'm not able to help with that one.",
+      "citations": [],
+      "missing_information": [],
+      "caveats": [],
+      "tools_considered": [],
+      "tools_skipped": [],
+      "tier3_blocked": [],
+      "stop_reason": "plan_complete",
+      "steps": 0,
+      "trajectory": [],
+      "guardrails": {},
+      "replans": 0,
+      "latency_ms": 1.6871689999788941,
+      "ticket_id": null
+    }
+  },
+  {
+    "scenario": "High-risk / ambiguous",
+    "text": "change the bank account for my refund to a different one",
+    "note": "POL-CS-001 S6: identity cannot be verified in chat",
+    "decision": {
+      "intent": "guardrail",
+      "actions_taken": [
+        "escalate_to_human"
+      ],
+      "evidence_used": [],
+      "confidence": 0.0,
+      "resolution_status": "escalated",
+      "escalation_required": true,
+      "escalation_reason": "identity_verification_required",
+      "answer": "For anything that changes your account or where a refund is sent, I need to hand you to a colleague who can verify your identity properly. I've done that.",
+      "citations": [],
+      "missing_information": [],
+      "caveats": [],
+      "tools_considered": [],
+      "tools_skipped": [],
+      "tier3_blocked": [],
+      "stop_reason": "hard_escalation",
+      "steps": 0,
+      "trajectory": [],
+      "guardrails": {
+        "input": {
+          "stage": "input",
+          "severity": "escalate",
+          "blocked": false,
+          "must_escalate": true,
+          "rules_fired": [
+            "identity_verification_required"
+          ],
+          "findings": [
+            {
+              "rule": "identity_verification_required",
+              "stage": "input",
+              "severity": "escalate",
+              "reason": "request would alter an account or redirect money; identity cannot be verified in chat (POL-CS-001 S6)",
+              "detail": {
+                "matched": "change the bank"
+              },
+              "customer_message": "For anything that changes your account or where a refund is sent, I need to hand you to a colleague who can verify your identity properly. I've done that."
+            }
+          ]
+        }
+      },
+      "replans": 0,
+      "latency_ms": 2.912512999955652,
+      "ticket_id": "TKT-E096B1"
+    }
+  },
+  {
+    "scenario": "Requires human escalation",
+    "text": "This is the THIRD time. Refund me today or I'm going to consumer court.",
+    "note": "hard trigger: escalate before spending any tool calls on policy",
+    "decision": {
+      "intent": "complaint",
+      "actions_taken": [
+        "escalate_to_human"
+      ],
+      "evidence_used": [],
+      "confidence": 0.0,
+      "resolution_status": "escalated",
+      "escalation_required": true,
+      "escalation_reason": "legal_or_chargeback_threat",
+      "answer": "I've passed this straight to a colleague who can deal with it properly. Reference: TKT-D2DEEB.",
+      "citations": [],
+      "missing_information": [],
+      "caveats": [],
+      "tools_considered": [],
+      "tools_skipped": [],
+      "tier3_blocked": [],
+      "stop_reason": "plan_complete",
+      "steps": 1,
+      "trajectory": [],
+      "guardrails": {},
+      "replans": 0,
+      "latency_ms": 3.8466759999664646,
+      "ticket_id": "TKT-D2DEEB"
+    }
+  }
+]

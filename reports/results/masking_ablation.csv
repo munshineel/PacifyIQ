@@ -1,0 +1,4 @@
+model,val_masked,val_unmasked,val_delta,test_masked,test_unmasked,test_delta
+word + LogReg,0.9066,0.9125,-0.0059,0.5223,0.5593,-0.037
+union + LogReg,0.9616,0.9657,-0.004,0.5863,0.593,-0.0067
+union + LinearSVC,0.9845,0.9845,0.0,0.5726,0.5778,-0.0051

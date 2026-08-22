@@ -1,0 +1,16 @@
+id,query,type,difficulty,gold,retrieved_top3,found_at_rank,top_score
+R013,How is the refund amount calculated?,single,medium,refund_policy:S4,refund_policy:S12; refund_policy:S5; refund_policy:S6,7.0,0.0162
+R022,How long is the warranty on a Pacify laptop?,single,easy,warranty_policy:S1,product_faq:S4; technical_support_faq:S7; product_faq:S7,7.0,0.0144
+R038,Which EU countries do you ship to?,single,easy,shipping_policy:S1,shipping_policy:S11; eu_regional_addendum:None; shipping_policy:S2,,0.0157
+R046,I was charged twice. What happens?,single,medium,payment_policy:S5,shipping_policy:S3; shipping_policy:S7; product_faq:S6,,0.0152
+R058,Am I talking to a bot?,single,medium,customer_service_policy:S12,technical_support_faq:S6; product_faq:S4; product_faq:S4,,0.0103
+R059,Can the AI approve my refund?,single,hard,customer_service_policy:S12,refund_policy:S11; refund_policy:S5; refund_policy:S6,,0.0163
+R064,What does SYS-0x0000007B mean?,single,medium,technical_support_faq:S9,warranty_policy:S3; eu_regional_addendum:S2; product_faq:S2,10.0,0.0162
+R065,My laptop will not turn on. What should I do?,single,easy,technical_support_faq:S2,refund_policy:S4; technical_support_faq:S7; refund_policy:S7,,0.0149
+R073,What is the difference between the ProBook 14 and 16?,single,medium,product_faq:S8,manual_vision27:S4; technical_support_faq:S10; manual_probook14:S1,9.0,0.0154
+R074,How much does the ProBook 14 weigh?,multi,easy,manual_probook14:S2; product_faq:S8,manual_vision27:S4; manual_probook14:S9; manual_probook14:S1,9.0,0.0152
+R075,Is the Phone X waterproof?,multi,hard,manual_phonex:S5; product_faq:S8,manual_phonex:S4; manual_phonex:S2; manual_phonex:S1,7.0,0.0154
+R083,How long do I have to return my laptop?,contradiction,hard,return_policy_v2:S2; shipping_policy:S11,refund_policy:S4; refund_policy:S7; product_faq:S4,,0.0151
+R090,When will I get my money back?,ambiguous,hard,payment_policy:S4; refund_policy:S3,customer_service_policy:S6; product_faq:S4; product_faq:S4,9.0,0.0157
+R100,POL-WAR-001 S6,lexical,hard,warranty_policy:S6,warranty_policy:None; manual_phonex:S6; technical_support_faq:S3,,0.0158
+R114,Which cable do I need for 75Hz on the Vision 27?,single,medium,manual_vision27:S4,manual_vision27:S1; technical_support_faq:S3; product_faq:S7,9.0,0.0156

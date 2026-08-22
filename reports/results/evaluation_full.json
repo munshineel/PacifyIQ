@@ -1,0 +1,724 @@
+{
+  "components": [
+    {
+      "component": "1. Intent classification",
+      "n_cases": 140,
+      "runtime_s": 1.07,
+      "error": null,
+      "metrics": [
+        {
+          "name": "macro_f1",
+          "value": 0.6107361982066941,
+          "n": 140,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": 0.091,
+          "target": 0.6,
+          "note": "hand-authored hard set; a random split cannot discriminate",
+          "lift": 0.5197361982066941,
+          "meets_target": true
+        },
+        {
+          "name": "weighted_f1",
+          "value": 0.6024742722625582,
+          "n": 140,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "accuracy",
+          "value": 0.6071428571428571,
+          "n": 140,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": 0.182,
+          "target": null,
+          "note": "reported, never used for selection - 10:1 imbalance",
+          "lift": 0.4251428571428571,
+          "meets_target": null
+        },
+        {
+          "name": "macro_precision",
+          "value": 0.6297270465719664,
+          "n": 140,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "macro_recall",
+          "value": 0.6612351528760197,
+          "n": 140,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "lenient_accuracy",
+          "value": 0.7428571428571429,
+          "n": 140,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "credits naming the secondary intent of a compound message",
+          "lift": null,
+          "meets_target": null
+        }
+      ]
+    },
+    {
+      "component": "2. Sentiment / urgency",
+      "n_cases": 65,
+      "runtime_s": 0.13,
+      "error": null,
+      "metrics": [
+        {
+          "name": "sentiment_macro_f1",
+          "value": 0.8083333333333332,
+          "n": 65,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": 0.333,
+          "target": 0.7,
+          "note": "LLM-authored annotations, single annotator - indicative only",
+          "lift": 0.4753333333333332,
+          "meets_target": true
+        },
+        {
+          "name": "sentiment_weighted_f1",
+          "value": 0.831923076923077,
+          "n": 65,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "intent_prior_gain",
+          "value": 0.05504926108374364,
+          "n": 65,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "ablation: lexicon alone vs lexicon + prior",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "urgency_macro_f1",
+          "value": 0.7365079365079366,
+          "n": 65,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "urgency_within_one_level",
+          "value": 0.9538461538461539,
+          "n": 65,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "urgency is ordinal; distance matters",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "high_urgency_scored_low",
+          "value": 2,
+          "n": 65,
+          "scoring": "curated",
+          "higher_is_better": false,
+          "baseline": null,
+          "target": null,
+          "note": "the costly error - a serious problem reported calmly",
+          "lift": null,
+          "meets_target": null
+        }
+      ]
+    },
+    {
+      "component": "3. Retrieval",
+      "n_cases": 120,
+      "runtime_s": 1.37,
+      "error": null,
+      "metrics": [
+        {
+          "name": "recall@5",
+          "value": 0.8833,
+          "n": 120,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": 0.025,
+          "target": 0.85,
+          "note": "gold keyed to (doc, section), so it survives re-chunking",
+          "lift": 0.8583,
+          "meets_target": true
+        },
+        {
+          "name": "recall@1",
+          "value": 0.575,
+          "n": 120,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "recall@3",
+          "value": 0.8167,
+          "n": 120,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "recall@10",
+          "value": 0.9333,
+          "n": 120,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "precision@5",
+          "value": 0.2533,
+          "n": 120,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "low by construction - most queries have 1-2 gold sections",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "coverage@5",
+          "value": 0.8139,
+          "n": 120,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "fraction of ALL gold sections found - the multi-hop metric",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "mrr",
+          "value": 0.7056,
+          "n": 120,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "ndcg@5",
+          "value": 0.7818,
+          "n": 120,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        }
+      ]
+    },
+    {
+      "component": "4. RAG answer quality",
+      "n_cases": 65,
+      "runtime_s": 1.42,
+      "error": null,
+      "metrics": [
+        {
+          "name": "faithfulness",
+          "value": 1.0,
+          "n": 25,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": 0.95,
+          "note": "local extractive backend: 1.0 BY CONSTRUCTION, not a result",
+          "lift": null,
+          "meets_target": true
+        },
+        {
+          "name": "citation_accuracy",
+          "value": 1.0,
+          "n": 25,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "citation_recall",
+          "value": 0.5267,
+          "n": 25,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "answers_with_citation",
+          "value": 0.88,
+          "n": 25,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "correctness",
+          "value": 0.24,
+          "n": 25,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "exact fact match; understates - a right answer in different words scores wrong",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "partial_credit",
+          "value": 0.5933,
+          "n": 25,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "fraction of required facts present",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "abstention_rate",
+          "value": 0.7,
+          "n": 40,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": 0.7,
+          "note": "",
+          "lift": null,
+          "meets_target": true
+        },
+        {
+          "name": "false_abstention_rate",
+          "value": 0.1333,
+          "n": 60,
+          "scoring": "curated",
+          "higher_is_better": false,
+          "baseline": null,
+          "target": 0.15,
+          "note": "",
+          "lift": null,
+          "meets_target": true
+        },
+        {
+          "name": "balanced_abstention",
+          "value": 0.60669,
+          "n": 100,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "refusing everything scores 0 here",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "hallucination_rate",
+          "value": 0.0,
+          "n": 25,
+          "scoring": "deterministic",
+          "higher_is_better": false,
+          "baseline": null,
+          "target": 0.05,
+          "note": "",
+          "lift": null,
+          "meets_target": true
+        }
+      ]
+    },
+    {
+      "component": "5. Screenshot understanding",
+      "n_cases": 25,
+      "runtime_s": 33.51,
+      "error": null,
+      "metrics": [
+        {
+          "name": "extraction_accuracy",
+          "value": 1.0,
+          "n": 25,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": 0.9,
+          "note": "synthetic renders - will NOT transfer to real photos",
+          "lift": null,
+          "meets_target": true
+        },
+        {
+          "name": "vision_recall_lift",
+          "value": 0.28,
+          "n": 25,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "recall@5 0.720 text-only -> 1.000 with image",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "recall_text_only",
+          "value": 0.72,
+          "n": 25,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "recall_with_vision",
+          "value": 1.0,
+          "n": 25,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "marked_visible",
+          "value": 0.84,
+          "n": 25,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "read directly; inferred codes never steer retrieval",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "invented_codes",
+          "value": 0.0,
+          "n": 6,
+          "scoring": "deterministic",
+          "higher_is_better": false,
+          "baseline": null,
+          "target": 0.0,
+          "note": "codes claimed on images containing none",
+          "lift": null,
+          "meets_target": true
+        }
+      ]
+    },
+    {
+      "component": "6/7. Agent tools",
+      "n_cases": 30,
+      "runtime_s": 0.6,
+      "error": null,
+      "metrics": [
+        {
+          "name": "tool_selection_recall",
+          "value": 0.9166666666666666,
+          "n": 30,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": 0.8,
+          "note": "eval set authored pre-implementation; alias map applied",
+          "lift": null,
+          "meets_target": true
+        },
+        {
+          "name": "tool_selection_precision",
+          "value": 0.8505555555555555,
+          "n": 30,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "guards against scoring well by calling everything",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "argument_extraction",
+          "value": 1.0,
+          "n": 16,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": 0.95,
+          "note": "the most common tool-calling failure in practice",
+          "lift": null,
+          "meets_target": true
+        },
+        {
+          "name": "tool_execution_errors",
+          "value": 0.0,
+          "n": 30,
+          "scoring": "deterministic",
+          "higher_is_better": false,
+          "baseline": null,
+          "target": 0.0,
+          "note": "",
+          "lift": null,
+          "meets_target": true
+        },
+        {
+          "name": "mean_tools_per_request",
+          "value": 1.9666666666666666,
+          "n": 30,
+          "scoring": "deterministic",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "of 13 available - calling all would be 13",
+          "lift": null,
+          "meets_target": null
+        }
+      ]
+    },
+    {
+      "component": "8. Groundedness",
+      "n_cases": 11,
+      "runtime_s": 0.0,
+      "error": null,
+      "metrics": [
+        {
+          "name": "detection_rate",
+          "value": 1.0,
+          "n": 8,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": 1.0,
+          "note": "lexical: catches fabricated figures, codes, citations",
+          "lift": null,
+          "meets_target": true
+        },
+        {
+          "name": "false_flag_rate",
+          "value": 0.0,
+          "n": 3,
+          "scoring": "curated",
+          "higher_is_better": false,
+          "baseline": null,
+          "target": 0.0,
+          "note": "",
+          "lift": null,
+          "meets_target": true
+        },
+        {
+          "name": "balanced",
+          "value": 1.0,
+          "n": 11,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        }
+      ]
+    },
+    {
+      "component": "9. Escalation decisions",
+      "n_cases": 30,
+      "runtime_s": 0.58,
+      "error": null,
+      "metrics": [
+        {
+          "name": "accuracy",
+          "value": 0.9333333333333333,
+          "n": 30,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": 0.7333333333333334,
+          "target": 0.9,
+          "note": "",
+          "lift": 0.19999999999999996,
+          "meets_target": true
+        },
+        {
+          "name": "precision",
+          "value": 0.875,
+          "n": 30,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "of escalations raised, how many were needed",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "recall",
+          "value": 0.875,
+          "n": 30,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "of cases needing a human, how many got one",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "f1",
+          "value": 0.875,
+          "n": 30,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "adversarial_handled",
+          "value": 1.0,
+          "n": 30,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "attacks written by the same author as the rules",
+          "lift": null,
+          "meets_target": null
+        }
+      ]
+    },
+    {
+      "component": "10. End-to-end resolution",
+      "n_cases": 57,
+      "runtime_s": 4.29,
+      "error": null,
+      "metrics": [
+        {
+          "name": "outcome_accuracy",
+          "value": 0.8070175438596491,
+          "n": 57,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": 0.85,
+          "note": "58% of cases should NOT be answered",
+          "lift": null,
+          "meets_target": false
+        },
+        {
+          "name": "outcome_and_content",
+          "value": 0.7543859649122807,
+          "n": 57,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "correct decision AND the right fact in the answer",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "correct_on_answerable",
+          "value": 0.84,
+          "n": 25,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "correct_on_unanswerable",
+          "value": 0.78125,
+          "n": 32,
+          "scoring": "curated",
+          "higher_is_better": true,
+          "baseline": null,
+          "target": null,
+          "note": "",
+          "lift": null,
+          "meets_target": null
+        },
+        {
+          "name": "unsafe_resolutions",
+          "value": 5.0,
+          "n": 57,
+          "scoring": "deterministic",
+          "higher_is_better": false,
+          "baseline": null,
+          "target": 0.0,
+          "note": "answered confidently when it should have refused - the failure that reaches a customer",
+          "lift": null,
+          "meets_target": false
+        }
+      ]
+    }
+  ]
+}

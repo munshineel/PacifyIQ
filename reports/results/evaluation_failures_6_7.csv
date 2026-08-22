@@ -1,0 +1,4 @@
+id,message,expected,actual,selection,precision,arg_ok,tool_errors,n_tools,note
+A010,Where is my order and can I return it if it ,"get_order,search_knowledge_base",-,0.0,1.0,,0,0,"COMPOUND - two intents, missing orde"
+A027,What are your support hours?,search_knowledge_base,-,0.0,1.0,,0,0,RAG only
+A029,My package PAC-2026-12370 hasn't moved in 9 ,"get_order,create_support_ticket",get_order,0.5,1.0,True,0,1,stalled parcel -> trace ticket

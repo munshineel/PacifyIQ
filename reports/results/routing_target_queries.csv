@@ -1,0 +1,16 @@
+id,query,before@5,after@5,before_rank,after_rank,fixed,broken
+R058,Am I talking to a bot?,0.0,0.0,,,False,False
+R059,Can the AI approve my refund?,0.0,1.0,,1.0,True,False
+R064,What does SYS-0x0000007B mean?,0.0,1.0,10.0,2.0,True,False
+R065,My laptop will not turn on. What should I do?,0.0,0.0,,,False,False
+R022,How long is the warranty on a Pacify laptop?,0.0,1.0,7.0,1.0,True,False
+R038,Which EU countries do you ship to?,0.0,0.0,,,False,False
+R046,I was charged twice. What happens?,0.0,0.0,,,False,False
+R013,How is the refund amount calculated?,0.0,0.0,7.0,7.0,False,False
+R029,My Northwind laptop is faulty. Who handles the repai,1.0,1.0,3.0,2.0,False,False
+R030,How long does a warranty repair take?,1.0,1.0,5.0,4.0,False,False
+R073,What is the difference between the ProBook 14 and 16,0.0,0.0,9.0,6.0,False,False
+R074,How much does the ProBook 14 weigh?,0.0,0.0,9.0,6.0,False,False
+R075,Is the Phone X waterproof?,0.0,0.0,7.0,7.0,False,False
+R078,I am in Germany. How long do I have to return an ope,1.0,1.0,4.0,2.0,False,False
+R079,As an EU customer do I pay a restocking fee?,1.0,1.0,4.0,3.0,False,False

@@ -1,0 +1,11 @@
+n,scenario,status,tools,escalated,reason,conf,ms,pass,failed_checks
+1,Simple FAQ,resolved_with_caveat,1,False,-,0.83,61,True,
+2,Billing issue,resolved_with_caveat,3,False,-,0.83,32,True,
+3,Refund request,escalated,5,True,mutating_action_requires_approval,0.0,18,True,
+4,Technical problem,resolved,2,False,-,0.83,23,True,
+5,Screenshot technical problem,resolved,3,False,-,0.83,841,True,
+6,Missing information,needs_information,0,False,-,0.0,2,True,
+7,Conflicting information,resolved,1,False,-,0.83,20,True,
+8,Unsupported request,refused,0,False,-,0.6,2,True,
+9,High-risk / ambiguous,escalated,1,True,identity_verification_required,0.0,3,True,
+10,Requires human escalation,escalated,1,True,legal_or_chargeback_threat,0.0,4,True,

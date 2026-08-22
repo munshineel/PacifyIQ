@@ -1,0 +1,26 @@
+id,text,code,recall_text,recall_vision,mrr_text,mrr_vision,bm25_text,bm25_vision,contributed
+V001,my monitor keeps going black randomly,ERR-DP-0x004,1.0,1.0,0.333,0.5,9.1,18.5,True
+V002,"something is wrong with my screen, see",ERR-DP-0x011,1.0,1.0,0.5,0.5,7.6,25.9,True
+V003,this keeps popping up when I try to pa,PAY-402,0.0,1.0,0.0,1.0,6.1,44.3,True
+V004,payment isn't going through,PAY-511,1.0,1.0,1.0,1.0,7.0,42.8,True
+V005,card not working at checkout,PAY-309,0.0,1.0,0.0,1.0,10.7,45.1,True
+V006,battery is behaving oddly,BAT-119,1.0,1.0,1.0,1.0,4.4,39.9,True
+V007,laptop won't charge properly,BAT-042,0.0,1.0,0.0,0.5,6.4,39.5,True
+V008,my wifi keeps disconnecting,WIFI-503,1.0,1.0,0.5,0.5,3.5,39.2,True
+V009,laptop shows a blue screen sometimes,SYS-0x0000007B,1.0,1.0,0.2,1.0,8.3,36.0,True
+V010,computer crashed with this message,SYS-0x000000EF,0.0,1.0,0.0,0.5,6.2,31.2,True
+V011,laptop gets really hot and slows down,THRM-88,0.0,1.0,0.0,0.5,6.3,41.4,True
+V012,something about the fan in diagnostics,THRM-12,1.0,1.0,0.333,0.5,8.8,34.1,True
+V013,no sound after installing something,AUD-330,1.0,1.0,0.2,0.5,6.5,45.7,True
+V014,keyboard stopped responding,KEY-018,1.0,1.0,1.0,1.0,8.4,52.3,True
+V015,diagnostics is showing a storage warni,STO-440,1.0,1.0,1.0,1.0,7.5,53.3,True
+V016,got an error in the memory test,MEM-221,1.0,1.0,1.0,1.0,8.6,53.7,True
+V017,camera not working in meetings,CAM-090,1.0,1.0,1.0,1.0,6.0,44.9,True
+V018,screen is very dim now,DSP-014,1.0,1.0,0.5,0.5,5.2,5.2,False
+V019,monitor says something about the signa,ERR-HD-0x002,1.0,1.0,1.0,1.0,8.3,12.9,True
+V020,my payment was declined again,PAY-118,1.0,1.0,0.5,1.0,5.4,45.2,True
+V021,limit message at checkout,PAY-604,1.0,1.0,1.0,1.0,6.3,50.7,True
+V022,insufficient balance error,PAY-207,1.0,1.0,0.5,1.0,5.5,44.4,True
+V023,charging stopped by itself,BAT-007,0.0,1.0,0.0,0.5,5.1,52.5,True
+V024,cannot join my home network,WIFI-211,0.0,1.0,0.0,0.5,4.7,22.6,True
+V025,diagnostics flagged the display cable,DSP-051,1.0,1.0,1.0,1.0,7.8,32.1,True

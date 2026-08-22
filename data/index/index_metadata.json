@@ -1,0 +1,57 @@
+{
+  "built_at": "2026-08-21 04:16:55",
+  "strategy": "section",
+  "chunk_size": 200,
+  "overlap": 40,
+  "backend": "tfidf_svd",
+  "embedding_dim": 192,
+  "corpus": {
+    "n_documents": 13,
+    "n_pages": 47,
+    "n_words": 16208,
+    "n_chars": 99004,
+    "by_type": {
+      "policy": 30,
+      "manual": 6,
+      "faq": 6,
+      "troubleshooting": 5
+    },
+    "by_topic": {
+      "account": 4,
+      "returns": 10,
+      "product": 6,
+      "billing": 3,
+      "general": 6,
+      "refunds": 4,
+      "shipping": 4,
+      "technical": 5,
+      "warranty": 5
+    },
+    "by_version": {
+      "current": 45,
+      "archived": 2
+    },
+    "regional": [
+      "eu_regional_addendum"
+    ],
+    "empty_pages": 0
+  },
+  "chunks": {
+    "n_chunks": 200,
+    "tokens_total": 21120,
+    "tokens_mean": 105.6,
+    "tokens_median": 97,
+    "tokens_min": 20,
+    "tokens_max": 406,
+    "chunks_with_section": 190,
+    "section_coverage_pct": 95.0,
+    "unique_ids": 200,
+    "by_doc_type": {
+      "policy": 134,
+      "manual": 26,
+      "faq": 23,
+      "troubleshooting": 17
+    },
+    "archived_chunks": 9
+  }
+}

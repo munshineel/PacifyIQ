@@ -1,0 +1,512 @@
+{
+  "description": "Generation eval. Checks faithfulness, correctness, citation accuracy.",
+  "cases": [
+    {
+      "id": "G001",
+      "question": "What is the return window for an opened laptop?",
+      "reference_answer": "14 calendar days from delivery.",
+      "required_citations": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S2"
+        }
+      ],
+      "must_contain": [
+        "14",
+        "days",
+        "delivery"
+      ],
+      "must_not_contain": [
+        "30 days"
+      ]
+    },
+    {
+      "id": "G002",
+      "question": "Is there a restocking fee if I return an opened monitor?",
+      "reference_answer": "Yes, 10% of item value.",
+      "required_citations": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S10"
+        }
+      ],
+      "must_contain": [
+        "10",
+        "restocking"
+      ],
+      "must_not_contain": [
+        "no fee",
+        "free"
+      ]
+    },
+    {
+      "id": "G003",
+      "question": "How many dead pixels before replacement?",
+      "reference_answer": "Five or more dead or stuck pixels.",
+      "required_citations": [
+        {
+          "doc": "warranty_policy",
+          "section": "S6"
+        }
+      ],
+      "must_contain": [
+        "5",
+        "five"
+      ],
+      "must_not_contain": [
+        "3",
+        "any number",
+        "one"
+      ]
+    },
+    {
+      "id": "G004",
+      "question": "I have 3 dead pixels. Will you replace my monitor?",
+      "reference_answer": "No. Below the 5-pixel threshold it is not covered.",
+      "required_citations": [
+        {
+          "doc": "warranty_policy",
+          "section": "S6"
+        }
+      ],
+      "must_contain": [
+        "not covered",
+        "threshold",
+        "5"
+      ],
+      "must_not_contain": [
+        "yes",
+        "we will replace",
+        "exception"
+      ]
+    },
+    {
+      "id": "G005",
+      "question": "Will you refund my EMI interest?",
+      "reference_answer": "No. Only the principal is refunded.",
+      "required_citations": [
+        {
+          "doc": "refund_policy",
+          "section": "S7"
+        }
+      ],
+      "must_contain": [
+        "principal",
+        "not refunded"
+      ],
+      "must_not_contain": [
+        "yes",
+        "full interest"
+      ]
+    },
+    {
+      "id": "G006",
+      "question": "How much do I get back on a 64900 laptop, opened, change of mind?",
+      "reference_answer": "57,960 rupees after 10% restocking and 450 return shipping.",
+      "required_citations": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S10"
+        },
+        {
+          "doc": "return_policy_v2",
+          "section": "S9"
+        },
+        {
+          "doc": "refund_policy",
+          "section": "S4"
+        }
+      ],
+      "must_contain": [
+        "57,960",
+        "57960"
+      ],
+      "must_not_contain": [
+        "64,900",
+        "full refund"
+      ]
+    },
+    {
+      "id": "G007",
+      "question": "How long is the warranty on a Pacify ProBook 14?",
+      "reference_answer": "24 months from delivery.",
+      "required_citations": [
+        {
+          "doc": "warranty_policy",
+          "section": "S1"
+        }
+      ],
+      "must_contain": [
+        "24",
+        "months"
+      ],
+      "must_not_contain": [
+        "12 months",
+        "1 year"
+      ]
+    },
+    {
+      "id": "G008",
+      "question": "How long is the warranty on a Northwind Ultra 15?",
+      "reference_answer": "12 months, administered by the manufacturer.",
+      "required_citations": [
+        {
+          "doc": "warranty_policy",
+          "section": "S1"
+        },
+        {
+          "doc": "warranty_policy",
+          "section": "S8"
+        }
+      ],
+      "must_contain": [
+        "12",
+        "manufacturer"
+      ],
+      "must_not_contain": [
+        "24",
+        "Pacify handles"
+      ]
+    },
+    {
+      "id": "G009",
+      "question": "My Northwind laptop is faulty. Will Pacify repair it?",
+      "reference_answer": "No. Third-party brands go to the manufacturer service network.",
+      "required_citations": [
+        {
+          "doc": "warranty_policy",
+          "section": "S8"
+        }
+      ],
+      "must_contain": [
+        "manufacturer",
+        "service"
+      ],
+      "must_not_contain": [
+        "we will repair",
+        "Pacify handles"
+      ]
+    },
+    {
+      "id": "G010",
+      "question": "What does ERR-DP-0x004 mean?",
+      "reference_answer": "DisplayPort handshake failure. Reseat or replace the cable.",
+      "required_citations": [
+        {
+          "doc": "technical_support_faq",
+          "section": "S9"
+        }
+      ],
+      "must_contain": [
+        "DisplayPort",
+        "cable"
+      ],
+      "must_not_contain": [
+        "panel failure",
+        "warranty"
+      ]
+    },
+    {
+      "id": "G011",
+      "question": "My payment failed but I was charged. Is that a refund?",
+      "reference_answer": "No, it is a bank reversal in 5-7 business days.",
+      "required_citations": [
+        {
+          "doc": "payment_policy",
+          "section": "S4"
+        }
+      ],
+      "must_contain": [
+        "reversal",
+        "5",
+        "7"
+      ],
+      "must_not_contain": [
+        "refund",
+        "we will process"
+      ]
+    },
+    {
+      "id": "G012",
+      "question": "Does the Vision 27 support 144Hz?",
+      "reference_answer": "No. Maximum refresh rate is 75Hz.",
+      "required_citations": [
+        {
+          "doc": "product_faq",
+          "section": "S8"
+        },
+        {
+          "doc": "manual_vision27",
+          "section": "S2"
+        }
+      ],
+      "must_contain": [
+        "75"
+      ],
+      "must_not_contain": [
+        "144",
+        "yes"
+      ]
+    },
+    {
+      "id": "G013",
+      "question": "Is the Phone X IP68 rated?",
+      "reference_answer": "No, IP53. IP68 is the Phone X Pro.",
+      "required_citations": [
+        {
+          "doc": "manual_phonex",
+          "section": "S2"
+        }
+      ],
+      "must_contain": [
+        "IP53"
+      ],
+      "must_not_contain": [
+        "IP68 yes",
+        "waterproof"
+      ]
+    },
+    {
+      "id": "G014",
+      "question": "How long do I have to return in the EU, opened item?",
+      "reference_answer": "14 days, regardless of whether it is opened.",
+      "required_citations": [
+        {
+          "doc": "eu_regional_addendum",
+          "section": "S2"
+        }
+      ],
+      "must_contain": [
+        "14",
+        "regardless",
+        "opened"
+      ],
+      "must_not_contain": [
+        "30",
+        "not eligible"
+      ]
+    },
+    {
+      "id": "G015",
+      "question": "As an EU customer, do I pay a restocking fee?",
+      "reference_answer": "No restocking fee may be applied.",
+      "required_citations": [
+        {
+          "doc": "eu_regional_addendum",
+          "section": "S4"
+        }
+      ],
+      "must_contain": [
+        "no",
+        "not"
+      ],
+      "must_not_contain": [
+        "10%",
+        "yes"
+      ]
+    },
+    {
+      "id": "G016",
+      "question": "How long do I have to return my laptop?",
+      "reference_answer": "CONTRADICTION: policy says 14 days opened, shipping policy states 30 day guarantee. Must surface both and escalate.",
+      "required_citations": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S2"
+        },
+        {
+          "doc": "shipping_policy",
+          "section": "S11"
+        }
+      ],
+      "must_contain": [
+        "14",
+        "30",
+        "conflict"
+      ],
+      "must_not_contain": [
+        "confidently states one only"
+      ]
+    },
+    {
+      "id": "G017",
+      "question": "Can you approve my refund right now?",
+      "reference_answer": "No. The assistant cannot approve refunds; it refers to a human.",
+      "required_citations": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S12"
+        }
+      ],
+      "must_contain": [
+        "cannot",
+        "human"
+      ],
+      "must_not_contain": [
+        "approved",
+        "yes I have processed"
+      ]
+    },
+    {
+      "id": "G018",
+      "question": "Can you change the bank account for my refund?",
+      "reference_answer": "Requires identity verification via a verified channel.",
+      "required_citations": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S6"
+        }
+      ],
+      "must_contain": [
+        "verification",
+        "OTP"
+      ],
+      "must_not_contain": [
+        "done",
+        "updated"
+      ]
+    },
+    {
+      "id": "G019",
+      "question": "What is the free shipping threshold?",
+      "reference_answer": "Orders of 5,000 rupees and above.",
+      "required_citations": [
+        {
+          "doc": "shipping_policy",
+          "section": "S3"
+        }
+      ],
+      "must_contain": [
+        "5,000",
+        "5000"
+      ],
+      "must_not_contain": [
+        "free on everything"
+      ]
+    },
+    {
+      "id": "G020",
+      "question": "How long from order to delivery on standard shipping?",
+      "reference_answer": "1 business day processing plus 3-7 days transit.",
+      "required_citations": [
+        {
+          "doc": "shipping_policy",
+          "section": "S4"
+        },
+        {
+          "doc": "shipping_policy",
+          "section": "S2"
+        }
+      ],
+      "must_contain": [
+        "24 hours",
+        "3",
+        "7"
+      ],
+      "must_not_contain": [
+        "3-7 days total"
+      ]
+    },
+    {
+      "id": "G021",
+      "question": "Am I talking to a human?",
+      "reference_answer": "Discloses it is automated and offers a human agent.",
+      "required_citations": [
+        {
+          "doc": "customer_service_policy",
+          "section": "S12"
+        }
+      ],
+      "must_contain": [
+        "automated",
+        "human"
+      ],
+      "must_not_contain": [
+        "yes I am a person"
+      ]
+    },
+    {
+      "id": "G022",
+      "question": "I bought on no-cost EMI for a 64900 laptop discounted to 60700. Return payout?",
+      "reference_answer": "54,180 after 10% restocking and 450 shipping on the amount actually paid.",
+      "required_citations": [
+        {
+          "doc": "refund_policy",
+          "section": "S7"
+        }
+      ],
+      "must_contain": [
+        "54,180",
+        "54180",
+        "60,700"
+      ],
+      "must_not_contain": [
+        "64,900"
+      ]
+    },
+    {
+      "id": "G023",
+      "question": "My laptop broke 8 days after delivery. Return or warranty?",
+      "reference_answer": "Both routes are arguable; must present both and escalate.",
+      "required_citations": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S6"
+        },
+        {
+          "doc": "warranty_policy",
+          "section": "S4"
+        }
+      ],
+      "must_contain": [
+        "return",
+        "warranty",
+        "both"
+      ],
+      "must_not_contain": [
+        "only warranty",
+        "only return"
+      ]
+    },
+    {
+      "id": "G024",
+      "question": "Can I return a redeemed gift card?",
+      "reference_answer": "No, redeemed gift cards are non-returnable.",
+      "required_citations": [
+        {
+          "doc": "return_policy_v2",
+          "section": "S5"
+        }
+      ],
+      "must_contain": [
+        "not returnable",
+        "redeemed"
+      ],
+      "must_not_contain": [
+        "yes"
+      ]
+    },
+    {
+      "id": "G025",
+      "question": "When will I get my money back?",
+      "reference_answer": "Ambiguous: must clarify whether the order completed or the payment failed.",
+      "required_citations": [
+        {
+          "doc": "refund_policy",
+          "section": "S3"
+        },
+        {
+          "doc": "payment_policy",
+          "section": "S4"
+        }
+      ],
+      "must_contain": [
+        "clarify",
+        "did your order"
+      ],
+      "must_not_contain": [
+        "states one timeline confidently"
+      ]
+    }
+  ]
+}
