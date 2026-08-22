@@ -26,7 +26,7 @@ Data → NLP → Retrieval → Multimodal → RAG → Agent → Tools → Guardr
 | **Unsafe resolutions** | **5 in 57** — named individually, not averaged away |
 
 **Live application:** https://pacifyiq.streamlit.app
-![PacifyIQ dashboard](docs/images/dashboard.png)
+![PacifyIQ dashboard](docs/DASHBOARD.png)
 
 ---
 
