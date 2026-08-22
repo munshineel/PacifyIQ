@@ -642,7 +642,7 @@ reported.
 
 ## 28. Screenshots / Demo
 
-**Live application:** *(add your Streamlit Cloud URL here)*
+**Live application:** https://pacifyiq.streamlit.app
 
 Five queries that demonstrate the system in about ninety seconds:
 
