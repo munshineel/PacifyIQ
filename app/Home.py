@@ -36,6 +36,28 @@ ui.header(
     "cites its sources, and hands over to a colleague when it should not "
     "answer.")
 
+# ------------------------------------------------------------- bootstrap
+# On a fresh deployment the derived artifacts do not exist yet. Building them
+# takes ~30s once; committing them would mean shipping duplicated state that
+# can silently disagree with the corpus that produced it.
+if not svc.system_ready():
+    import scripts.ensure_artifacts as bootstrap
+
+    if bootstrap.missing():
+        st.info("First run on this server - preparing the knowledge base. "
+                "This takes about half a minute and happens only once.")
+        box = st.empty()
+        with st.spinner("Building..."):
+            ok, log = bootstrap.build(progress=lambda m: box.caption(m))
+        box.empty()
+        if ok:
+            st.success("Ready.")
+            st.rerun()
+        else:
+            st.error("Setup failed.")
+            st.code(chr(10).join(log[-6:]))
+            st.stop()
+
 # ---------------------------------------------------------------- status
 status = svc.check_system()
 ready = svc.system_ready()
