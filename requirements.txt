@@ -28,3 +28,7 @@ streamlit>=1.40
 
 # NOTE: no torch here. Transformers stay in requirements-dev.txt so the
 # deployed app fits inside Streamlit Cloud's ~1GB limit.
+
+# --- data generation: needed at runtime because artifacts are built
+# on first run rather than committed (see scripts/ensure_artifacts.py) ---
+Faker>=25.0
