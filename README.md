@@ -25,8 +25,7 @@ Data → NLP → Retrieval → Multimodal → RAG → Agent → Tools → Guardr
 | **Tests** | 574, with a **100% mutation score** |
 | **Unsafe resolutions** | **5 in 57** — named individually, not averaged away |
 
-> ⚠️ **Portfolio and research-grade. Not production ready.** All data is
-> synthetic. §26 states the limitations plainly.
+**Live application:** https://pacifyiq.streamlit.app
 
 ---
 
