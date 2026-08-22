@@ -1,13 +1,8 @@
-# --- secrets: never commit ---
-.env
+﻿.env
 .streamlit/secrets.toml
-
-# --- environments ---
 .venv/
 venv/
 env/
-
-# --- python ---
 __pycache__/
 *.pyc
 *.pyo
@@ -16,19 +11,19 @@ __pycache__/
 .mypy_cache/
 *.egg-info/
 
-# --- runtime data (regenerated, not source) ---
+# Derived artifacts - rebuilt by scripts/ensure_artifacts.py in ~29s.
+# Committing them means duplicated state that can silently disagree with
+# the corpus that produced it.
+data/db/pacify.db
 data/db/traces.db
+data/index/
+models/*.joblib
+models/*.json
+data/processed/
+data/eval/screenshots/
+
 data/cache/
 *.log
-
-# --- os ---
 .DS_Store
 Thumbs.db
-
-# --- notebooks: strip output before committing, keep the notebook ---
 .ipynb_checkpoints/
-
-# NOTE: data/index/ and models/ ARE committed deliberately.
-# Streamlit Cloud has no build step, so the app must ship with a prebuilt
-# index and classifier or it cannot start. Together they are ~8 MB, well
-# inside GitHub's limits.
