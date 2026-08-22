@@ -1,6 +1,10 @@
 # PacifyIQ
 ## Multimodal Customer Support Intelligence & AI Agent
 
+**🔗 Live application: [pacifyiq.streamlit.app](https://pacifyiq.streamlit.app)**
+
+![PacifyIQ dashboard](docs/DASHBOARD.png)
+
 PacifyIQ is an AI-powered customer support system that combines NLP,
 retrieval-augmented generation, multimodal screenshot understanding and agentic
 workflows to understand customer issues, retrieve relevant evidence, take
@@ -24,9 +28,6 @@ Data → NLP → Retrieval → Multimodal → RAG → Agent → Tools → Guardr
 | **Adversarial inputs handled** | 100% (30 attacks), 1.0% false positives |
 | **Tests** | 574, with a **100% mutation score** |
 | **Unsafe resolutions** | **5 in 57** — named individually, not averaged away |
-
-**Live application:** https://pacifyiq.streamlit.app
-![PacifyIQ dashboard]("C:\DS-AI-Spiced\PacifyIQ_GenAI_Customer_Support_Platform\docs\DASHBOARD.png")
 
 ---
 
