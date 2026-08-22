@@ -27,3 +27,5 @@ data/cache/
 .DS_Store
 Thumbs.db
 .ipynb_checkpoints/
+data/db/.views_applied
+data/db/.views_applied
