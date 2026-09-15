@@ -43,13 +43,15 @@ ui.header(
 if not svc.system_ready():
     import scripts.ensure_artifacts as bootstrap
 
+    @st.cache_resource(show_spinner=False)
+    def _bootstrap_once():
+        return bootstrap.build()
+
     if bootstrap.missing():
         st.info("First run on this server - preparing the knowledge base. "
                 "This takes about half a minute and happens only once.")
-        box = st.empty()
         with st.spinner("Building..."):
-            ok, log = bootstrap.build(progress=lambda m: box.caption(m))
-        box.empty()
+            ok, log = _bootstrap_once()
         if ok:
             st.success("Ready.")
             st.rerun()
